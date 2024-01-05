@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Intro, FullBleed, SingleTwoThird, Double, Quintuple } from '$lib/projects/index';
   import PlanAndImages from './PlanAndImages.svelte';
+  import FullBleedScroll from './FullBleedScroll.svelte';
 
   import fullBleedImage1 from './full-bleed-1.jpg';
   import fullBleedImage2 from './full-bleed-2.jpg';
@@ -35,6 +36,11 @@
   import process3Image from './process-3.jpg';
   import process4Image from './process-4.jpg';
   import halfBleedImage1 from './half-bleed-1.jpg';
+
+  import elevationWestImage from './elevation-west.png';
+  import elevationEastImage from './elevation-east.png';
+  import sectionWestImage from './section-west.png';
+  import sectionEastImage from './section-east.png';
 
   import { intro } from './data';
 </script>
@@ -95,6 +101,11 @@
 />
 
 <FullBleed image={fullBleedImage2} />
+
+<FullBleedScroll image={elevationWestImage} />
+<FullBleedScroll image={sectionWestImage} />
+<FullBleedScroll image={elevationEastImage} />
+<FullBleedScroll image={sectionEastImage} />
 
 <Double
   image1={westFacadeImage}
