@@ -1,7 +1,7 @@
 <script lang="ts">
   export let image1: string;
   export let image2: string;
-  export let caption: string | null;
+  export let caption: string | null = null;
   export let direction: 'left' | 'right' = 'left';
   export let spacing: 'half' | 'third' = 'half';
 </script>
