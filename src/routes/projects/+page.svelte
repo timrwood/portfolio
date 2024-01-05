@@ -8,7 +8,7 @@
 
 <div class="flex flex-wrap">
   {#each data.projects as project}
-    <a href="/work/{project.slug}" class="p-3 w-1/4 aspect-portrait relative group">
+    <a href="/projects/{project.slug}" class="p-3 w-1/4 aspect-portrait relative group">
       <img
         src={project.image}
         alt="Full Bleed"

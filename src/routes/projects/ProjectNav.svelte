@@ -5,7 +5,7 @@
 </script>
 
 <h1 class="text-4xl px-3 py-8">
-  <a href="/work" class="font-serif italic underline">Projects</a>
+  <a href="/projects" class="font-serif italic underline">Projects</a>
 
   {#if project}
     <span class="font-bold">{project.title}</span>

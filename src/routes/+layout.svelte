@@ -7,13 +7,13 @@
     <a href="/" class="text-xl font-bold leading-8 p-3">Tim Wood</a>
     <div class="shrink flex">
       <a
-        href="/work"
+        href="/projects"
         class="text-l font-bold leading-8 p-3 uppercase text-slate-700 hover:text-slate-900"
       >
         Projects
       </a>
       <a
-        href="/work"
+        href="/projects"
         class="text-l font-bold leading-8 p-3 uppercase text-slate-700 hover:text-slate-900"
       >
         About
