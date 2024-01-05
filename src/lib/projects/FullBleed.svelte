@@ -1,5 +1,7 @@
-<script>
-	export let image = '';
+<script lang="ts">
+  export let image: string;
 </script>
 
-<img src={image} alt="Full Bleed" />
+<div class="m-[0_-50vw] w-[100vw] relative left-1/2 right-1/2">
+  <img src={image} alt="Full Bleed" class="w-full" />
+</div>

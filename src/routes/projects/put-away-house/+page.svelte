@@ -1,6 +1,11 @@
 <script lang="ts">
-  import ProjectNav from '../ProjectNav.svelte';
-  import { project } from './data';
+  import { Intro, FullBleed } from '$lib/projects/index';
+
+  import fullBleedImage1 from './full-bleed-1.jpg';
+
+  import { intro } from './data';
 </script>
 
-<ProjectNav {project} />
+<Intro {intro} />
+
+<FullBleed image={fullBleedImage1} />

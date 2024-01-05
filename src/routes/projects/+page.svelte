@@ -1,10 +1,6 @@
 <script lang="ts">
-  import ProjectNav from './ProjectNav.svelte';
-
   export let data;
 </script>
-
-<ProjectNav />
 
 <div class="flex flex-wrap">
   {#each data.projects as project}

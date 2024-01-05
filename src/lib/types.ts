@@ -6,7 +6,7 @@ export type Project = {
 
 export type Intro = {
   title: string;
-  subtitle: string;
-  description: string;
+  subtitle: string[];
+  description: string[];
   image: string;
 };
