@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Intro, FullBleed, SingleTwoThird, Double, Quintuple } from '$lib/projects/index';
+  import { Intro, FullBleed, Single, Double, Quintuple } from '$lib/projects/index';
   import PlanAndImages from './PlanAndImages.svelte';
   import FullBleedScroll from './FullBleedScroll.svelte';
 
@@ -49,8 +49,9 @@
 
 <FullBleed image={fullBleedImage1} />
 
-<SingleTwoThird
+<Single
   image={sitePlanImage}
+  spacing="third"
   caption="The north-facing site is located in the middle of a block on Potomac Ave in Wicker Park"
 />
 

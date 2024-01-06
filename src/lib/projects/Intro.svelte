@@ -11,7 +11,7 @@
       <h3 class="font-serif italic">{subtitle}</h3>
     {/each}
     {#each intro.description as description}
-      <p class="font-serif pt-4 text-pretty max-w-prose">{description}</p>
+      <p class="font-serif pt-4 text-pretty max-w-prose">{@html description}</p>
     {/each}
   </div>
   <div class="w-1/2">
