@@ -1,14 +1,29 @@
 <script lang="ts">
-  import { Intro, FullBleed, Single, Double, Quintuple } from '$lib/projects/index';
-  import PlanAndImages from './PlanAndImages.svelte';
+  import { Caption, FourImages, FullBleed, Image, Intro, SplitView } from '$lib/projects/index';
   import FullBleedScroll from './FullBleedScroll.svelte';
+  import PlanAndImages from './PlanAndImages.svelte';
 
-  import fullBleedImage1 from './full-bleed-1.jpg';
-  import fullBleedImage2 from './full-bleed-2.jpg';
-  import sitePlanImage from './site-plan.png';
+  import elevationEastImage from './elevation-east.png';
+  import elevationNorthDrawing from './elevation-north-drawing.png';
+  import elevationNorthPhoto from './elevation-north-photo.jpg';
+  import elevationWestImage from './elevation-west.png';
   import floorPlan1Image from './floor-plan-1.png';
   import floorPlan2Image from './floor-plan-2.png';
   import floorPlan3Image from './floor-plan-3.png';
+  import fullBleedImage1 from './full-bleed-1.jpg';
+  import fullBleedImage2 from './full-bleed-2.jpg';
+  import halfBleedImage1 from './half-bleed-1.jpg';
+  import process1Image from './process-1.jpg';
+  import process2Image from './process-2.jpg';
+  import process3Image from './process-3.jpg';
+  import process4Image from './process-4.jpg';
+  import sectionEastImage from './section-east.png';
+  import sectionNorthDrawing from './section-north-drawing.png';
+  import sectionNorthPhoto from './section-north-photo.jpg';
+  import sectionWestImage from './section-west.png';
+  import sitePlanImage from './site-plan.png';
+  import westFacadeDetailImage from './west-facade-detail.jpg';
+  import westFacadeImage from './west-facade.jpg';
   import windowImage11 from './window-1-1.jpg';
   import windowImage12 from './window-1-2.jpg';
   import windowImage13 from './window-1-3.jpg';
@@ -22,26 +37,6 @@
   import windowImage33 from './window-3-3.jpg';
   import windowImage34 from './window-3-4.jpg';
 
-  import elevationNorthDrawing from './elevation-north-drawing.png';
-  import elevationNorthPhoto from './elevation-north-photo.jpg';
-
-  import sectionNorthDrawing from './section-north-drawing.png';
-  import sectionNorthPhoto from './section-north-photo.jpg';
-
-  import westFacadeImage from './west-facade.jpg';
-  import westFacadeDetailImage from './west-facade-detail.jpg';
-
-  import process1Image from './process-1.jpg';
-  import process2Image from './process-2.jpg';
-  import process3Image from './process-3.jpg';
-  import process4Image from './process-4.jpg';
-  import halfBleedImage1 from './half-bleed-1.jpg';
-
-  import elevationWestImage from './elevation-west.png';
-  import elevationEastImage from './elevation-east.png';
-  import sectionWestImage from './section-west.png';
-  import sectionEastImage from './section-east.png';
-
   import { intro } from './data';
 </script>
 
@@ -49,11 +44,12 @@
 
 <FullBleed image={fullBleedImage1} />
 
-<Single
-  image={sitePlanImage}
-  spacing="third"
-  caption="The north-facing site is located in the middle of a block on Potomac Ave in Wicker Park"
-/>
+<SplitView align="bottom" spacing="2|1">
+  <Image slot="left" src={sitePlanImage} alt="Top down drawing of the building and its neighbors" />
+  <Caption slot="right">
+    The north-facing site is located in the middle of a block on Potomac Ave in Wicker Park
+  </Caption>
+</SplitView>
 
 <PlanAndImages
   plan={floorPlan1Image}
@@ -85,21 +81,34 @@
   subtitle="From north to south: Unit C kitchen, Unit C living room, Unit C bedroom, Unit B bedroom"
 />
 
-<Double
-  image1={elevationNorthDrawing}
-  image2={elevationNorthPhoto}
-  spacing="third"
-  direction="right"
-  caption="Access into the building is oriented towards the east, with the three entries positioned along the side of the building. The exterior stairs and doors to the units meet at a shared landing."
-/>
+<SplitView align="bottom" spacing="1|2">
+  <div slot="left" class="space-y-8">
+    <Caption>
+      Access into the building is oriented towards the east, with the three entries positioned along
+      the side of the building. The exterior stairs and doors to the units meet at a shared landing.
+    </Caption>
 
-<Double
-  image1={sectionNorthDrawing}
-  image2={sectionNorthPhoto}
-  spacing="third"
-  direction="right"
-  caption="A 3 foot change in floor height on either side of the shelving produces continuities between the living room floor and the kitchen counter, and allows objects to be shared across the shelving without sharing sight lines."
-/>
+    <Image src={elevationNorthPhoto} alt="Model photo of the front facade of the building" />
+  </div>
+  <Image
+    slot="right"
+    src={elevationNorthDrawing}
+    alt="Drawing of the front facade of the building"
+  />
+</SplitView>
+
+<SplitView align="bottom" spacing="1|2">
+  <div slot="left" class="space-y-8">
+    <Caption>
+      A 3 foot change in floor height on either side of the shelving produces continuities between
+      the living room floor and the kitchen counter, and allows objects to be shared across the
+      shelving without sharing sight lines.
+    </Caption>
+
+    <Image src={sectionNorthPhoto} alt="Interior model photo of a kitchen table" />
+  </div>
+  <Image slot="right" src={sectionNorthDrawing} alt="Drawing cutting through the narrow section" />
+</SplitView>
 
 <FullBleed image={fullBleedImage2} />
 
@@ -108,19 +117,35 @@
 <FullBleedScroll image={elevationEastImage} />
 <FullBleedScroll image={sectionEastImage} />
 
-<Double
-  image1={westFacadeImage}
-  image2={westFacadeDetailImage}
-  spacing="third"
-  caption="Operable windows punched into the west facade provide fresh air and daylight."
-/>
+<SplitView align="bottom" spacing="2|1">
+  <Image slot="left" src={westFacadeImage} alt="Model photo of the blank west facade" />
+  <div slot="right" class="space-y-8">
+    <Caption>Operable windows punched into the west facade provide fresh air and daylight.</Caption>
 
-<Quintuple
-  image1={halfBleedImage1}
-  image2={process1Image}
-  image3={process2Image}
-  image4={process3Image}
-  image5={process4Image}
-  direction="right"
-  caption="The prototype design of the shelving developed from applied surface to extruded form to grid of voids."
-/>
+    <Image
+      src={westFacadeDetailImage}
+      alt="Close-up model photo of one of the windows in the facade"
+    />
+  </div>
+</SplitView>
+
+<SplitView align="bottom" spacing="1|1">
+  <div slot="left" class="space-y-8">
+    <Caption>
+      The prototype design of the shelving developed from applied surface to extruded form to grid
+      of voids.
+    </Caption>
+
+    <FourImages
+      src1={process1Image}
+      alt1="Model photo shelving as an applied surface"
+      src2={process2Image}
+      alt2="Model photo of stairs moving within shelving"
+      src3={process3Image}
+      alt3="Model photo of shelving as occupiable space"
+      src4={process4Image}
+      alt4="Model photo of shelving as a grid of voids"
+    />
+  </div>
+  <Image slot="right" src={halfBleedImage1} alt="Model photo of the blank west facade" />
+</SplitView>
