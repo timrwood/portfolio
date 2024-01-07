@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let align: 'top' | 'bottom' = 'top';
+  export let align: 'top' | 'center' | 'bottom' = 'top';
   export let spacing: '1|1' | '1|2' | '2|1' = '1|1';
 
   const leftSpacingMap = {
@@ -16,6 +16,7 @@
 
   const alignMap = {
     top: 'items-start',
+    center: 'items-center',
     bottom: 'items-end'
   };
 </script>

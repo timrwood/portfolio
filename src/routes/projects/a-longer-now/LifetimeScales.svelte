@@ -1,6 +1,4 @@
 <script lang="ts">
-  export let description: string[] = [];
-
   import icon1Image from './icon-1.png';
   import icon2Image from './icon-2.png';
   import icon3Image from './icon-3.png';
@@ -22,27 +20,15 @@
   ];
 </script>
 
-<div class="px-3 py-24">
-  <div class="flex gap-24 items-center">
-    <div class="w-1/2">
-      {#each description as paragraph}
-        <p class="font-serif pt-4 text-pretty max-w-prose">{@html paragraph}</p>
-      {/each}
-    </div>
-
-    <div class="w-1/2">
-      <div class="flex items-center justify-around">
-        <div class="text-l pr-4 text-right font-bold w-1/2">Scale of Spaces</div>
-        <div class="w-16"></div>
-        <div class="text-l pl-4 text-left font-bold w-1/2">Scale of Lifetimes</div>
-      </div>
-      {#each icons as icon}
-        <div class="flex items-center justify-around py-2">
-          <div class="font-serif text-m italic pr-4 text-right w-1/2">{icon.space}</div>
-          <img src={icon.image} alt="Pen drawing of {icon.space}" class="w-16 h-16" />
-          <div class="font-serif text-m italic pl-4 text-left w-1/2">{icon.time}</div>
-        </div>
-      {/each}
-    </div>
-  </div>
+<div class="flex items-center justify-around">
+  <div class="text-l pr-4 text-right font-bold w-1/2">Scale of Spaces</div>
+  <div class="w-16"></div>
+  <div class="text-l pl-4 text-left font-bold w-1/2">Scale of Lifetimes</div>
 </div>
+{#each icons as icon}
+  <div class="flex items-center justify-around py-2">
+    <div class="font-serif text-m italic pr-4 text-right w-1/2">{icon.space}</div>
+    <img src={icon.image} alt="Pen drawing of {icon.space}" class="w-16 h-16" />
+    <div class="font-serif text-m italic pl-4 text-left w-1/2">{icon.time}</div>
+  </div>
+{/each}
