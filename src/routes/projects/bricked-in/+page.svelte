@@ -1,15 +1,13 @@
 <script lang="ts">
-  import { Intro, SplitView, Image, Description } from '$lib/projects/index';
+  import { Description, Image, Intro, SplitView } from '$lib/projects/index';
 
-  import large1Image from './large-1.jpg';
-  import large2Image from './large-2.jpg';
-  import large3Image from './large-3.jpg';
-
-  import square1Image from './square-1.jpg';
-  import square2Image from './square-2.jpg';
-
-  import drawing1Image from './drawing-1.jpg';
-  import drawing2Image from './drawing-2.jpg';
+  import drawing1Image from './images/drawing-1.jpg';
+  import drawing2Image from './images/drawing-2.jpg';
+  import large1Image from './images/large-1.jpg';
+  import large2Image from './images/large-2.jpg';
+  import large3Image from './images/large-3.jpg';
+  import square1Image from './images/square-1.jpg';
+  import square2Image from './images/square-2.jpg';
 
   import { intro } from './data';
 </script>

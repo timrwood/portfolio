@@ -1,7 +1,7 @@
 import type { Project, Intro } from '$lib/types';
 
-import coverImage from './cover.jpg';
-import introImage from './intro.jpg';
+import coverImage from './images/cover.jpg';
+import introImage from './images/intro.jpg';
 
 export const project: Project = {
   slug: 'bricked-in',
