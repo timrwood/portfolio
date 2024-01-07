@@ -1,12 +1,12 @@
 <script lang="ts">
-  import icon1Image from './icon-1.png';
-  import icon2Image from './icon-2.png';
-  import icon3Image from './icon-3.png';
-  import icon4Image from './icon-4.png';
-  import icon5Image from './icon-5.png';
-  import icon6Image from './icon-6.png';
-  import icon7Image from './icon-7.png';
-  import icon8Image from './icon-8.png';
+  import icon1Image from './images/icon-1.png';
+  import icon2Image from './images/icon-2.png';
+  import icon3Image from './images/icon-3.png';
+  import icon4Image from './images/icon-4.png';
+  import icon5Image from './images/icon-5.png';
+  import icon6Image from './images/icon-6.png';
+  import icon7Image from './images/icon-7.png';
+  import icon8Image from './images/icon-8.png';
 
   let icons = [
     { space: 'Room', time: 'Individual', image: icon1Image },

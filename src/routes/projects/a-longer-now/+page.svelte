@@ -9,16 +9,16 @@
     Video
   } from '$lib/projects/index';
 
-  import centeredImage from './centered.jpg';
-  import fullBleed1Image from './full-bleed-1.jpg';
-  import fullBleed2Image from './full-bleed-2.jpg';
-  import historyImage from './history.png';
-  import namesImage from './names.png';
-  import overheadImage from './overhead.jpg';
-  import small1Image from './small-1.jpg';
-  import small2Image from './small-2.jpg';
-  import small3Image from './small-3.jpg';
-  import small4Image from './small-4.jpg';
+  import centeredImage from './images/centered.jpg';
+  import fullBleed1Image from './images/full-bleed-1.jpg';
+  import fullBleed2Image from './images/full-bleed-2.jpg';
+  import historyImage from './images/history.png';
+  import namesImage from './images/names.png';
+  import overheadImage from './images/overhead.jpg';
+  import small1Image from './images/small-1.jpg';
+  import small2Image from './images/small-2.jpg';
+  import small3Image from './images/small-3.jpg';
+  import small4Image from './images/small-4.jpg';
 
   import { intro } from './data';
   import LifetimeScales from './LifetimeScales.svelte';
