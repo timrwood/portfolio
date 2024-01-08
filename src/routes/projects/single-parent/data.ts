@@ -1,9 +1,9 @@
 import type { Project } from '$lib/types';
 
-import coverImage from './cover.jpg';
+import coverImage from './images/cover.jpg';
 
 export const project: Project = {
   slug: 'single-parent',
-  title: 'A Collective for Single Parents',
+  title: 'Single Parent Collective',
   image: coverImage
 };

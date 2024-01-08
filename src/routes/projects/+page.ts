@@ -7,6 +7,11 @@ import { project as aLongerNow } from './a-longer-now/data';
 import { project as observingRuin } from './observing-ruin/data';
 import { project as singleParent } from './single-parent/data';
 import { project as museumMarket } from './museum-market/data';
+import { project as theMonasticPath } from './the-monastic-path/data';
+import { project as chicagoFrame } from './chicago-frame/data';
+import { project as twelveBrickWalls } from './twelve-brick-walls/data';
+import { project as polarAndCartesian } from './polar-and-cartesian/data';
+import { project as verticalAndHorizontal } from './vertical-and-horizontal/data';
 
 export function load(): { projects: Project[] } {
   return {
@@ -17,7 +22,12 @@ export function load(): { projects: Project[] } {
       museAthleticClub,
       observingRuin,
       singleParent,
-      museumMarket
+      museumMarket,
+      theMonasticPath,
+      chicagoFrame,
+      twelveBrickWalls,
+      polarAndCartesian,
+      verticalAndHorizontal
     ]
   };
 }
