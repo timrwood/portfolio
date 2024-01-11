@@ -9,7 +9,7 @@
 </script>
 
 <div
-  class="m-[0_-50vw] w-[100vw] relative left-1/2 right-1/2 py-12 bg-gradient-to-b from-[#718B64] to-[#8DA582] to-20% bg-gradient-to-b"
+  class="m-[0_-50vw] w-[100vw] relative left-1/2 right-1/2 py-12 bg-[#8DA582] border-b-4 border-slate-50"
   style="background-color:#8DA582"
 >
   <div class="container mx-auto">
