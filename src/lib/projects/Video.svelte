@@ -7,7 +7,7 @@
     <div class="aspect-video relative">
       <iframe
         class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/zRU_-CaUI_E?vq=hd1080&rel=0&color=white"
+        src="https://www.youtube.com/embed/{id}?vq=hd1080&rel=0&color=white"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
