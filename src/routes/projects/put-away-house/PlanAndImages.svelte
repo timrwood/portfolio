@@ -12,7 +12,7 @@
   class="m-[0_-50vw] w-[100vw] relative left-1/2 right-1/2 py-12 bg-[#8DA582] border-b-4 border-slate-50"
   style="background-color:#8DA582"
 >
-  <div class="container mx-auto">
+  <div class="xl:container mx-auto px-3">
     <div class="grid grid-cols-[4fr_3fr_3fr] grid-rows-4 gap-x-12 place-items-center">
       <img src={plan} alt="Full Bleed" class="row-span-4 col-span-1" />
       <img src={photo1} alt="Full Bleed" class="row-span-1 col-start-2 col-span-1" />
