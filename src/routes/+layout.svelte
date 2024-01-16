@@ -2,22 +2,12 @@
   import '../app.css';
 </script>
 
-<div class="bg-white shadow-2xl shadow-[rgba(0,0,0,0.1)] hover:text-slate-900 fixed inset-x-0 z-10">
-  <nav class="container mx-auto flex justify-between">
-    <a href="/" class="text-xl font-bold leading-8 p-3">Tim Wood</a>
-    <div class="shrink flex">
-      <a
-        href="/projects"
-        class="text-l font-bold leading-8 p-3 uppercase text-slate-700 hover:text-slate-900"
-      >
-        Projects
-      </a>
-      <a
-        href="/projects"
-        class="text-l font-bold leading-8 p-3 uppercase text-slate-700 hover:text-slate-900"
-      >
-        About
-      </a>
+<div class="fixed inset-x-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+  <nav class="container mx-auto flex justify-between uppercase leading-8 hover:text-slate-900">
+    <a href="/" class="text-xl p-3 tracking-widest">Tim Wood</a>
+    <div class="shrink flex text-l text-slate-700">
+      <a href="/projects" class="p-3">Projects</a>
+      <a href="/projects" class="p-3">About</a>
     </div>
   </nav>
 </div>
