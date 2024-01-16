@@ -10,7 +10,7 @@
   export let alt4: string;
 </script>
 
-<div class="grid grid-cols-2 grid-rows-2 gap-x-12 gap-y-12 place-items-center">
+<div class="grid grid-cols-2 grid-rows-2 gap-x-16 gap-y-16 place-items-center">
   <img src={src1} alt={alt1} />
   <img src={src2} alt={alt2} />
   <img src={src3} alt={alt3} />

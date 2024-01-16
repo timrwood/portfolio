@@ -4,7 +4,7 @@
   export let intro: Intro;
 </script>
 
-<div class="flex items-center pt-12 pb-36 px-3 gap-24">
+<div class="flex items-center py-24 px-3 gap-24">
   <div class="w-1/2">
     <h2 class="font-bold text-3xl pb-4">{intro.title}</h2>
     {#each intro.subtitle as subtitle}

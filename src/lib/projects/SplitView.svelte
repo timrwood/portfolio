@@ -21,8 +21,8 @@
   };
 </script>
 
-<div class="px-3 py-24">
-  <div class="flex gap-16 {alignMap[align]}">
+<div class="px-3 my-24">
+  <div class="flex gap-24 {alignMap[align]}">
     <div class={leftSpacingMap[spacing]}>
       <slot name="left" />
     </div>
