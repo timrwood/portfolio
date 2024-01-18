@@ -60,7 +60,7 @@
     src3={small3Image}
     alt3="A plastic material sample with the name 'Helen' engraved in it"
     src4={small4Image}
-    alt4="A styraphome material sample with the name 'Jennifer' engraved in it"
+    alt4="A styrofoam material sample with the name 'Jennifer' engraved in it"
   />
   <Description slot="right">
     <p>
