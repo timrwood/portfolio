@@ -40,10 +40,10 @@
   import wedgeWallDetailImage from './images/wedge-wall-detail.jpg';
   import wedgeWallImage from './images/wedge-wall.jpg';
 
-  import { intro } from './data';
+  import project from './project';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <SplitView align="bottom" spacing="1|1">
   <Image slot="left" src={animationImage} alt="TBD" />

@@ -20,11 +20,11 @@
   import small3Image from './images/small-3.jpg';
   import small4Image from './images/small-4.jpg';
 
-  import { intro } from './data';
+  import project from './project';
   import LifetimeScales from './LifetimeScales.svelte';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <FullBleed image={fullBleed1Image} />
 

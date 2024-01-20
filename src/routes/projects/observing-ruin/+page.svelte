@@ -26,10 +26,10 @@
   import siteContextImage from './images/site-context.png';
   import siteElevationImage from './images/site-elevation.jpg';
 
-  import { intro } from './data';
+  import project from './project';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <SplitView align="bottom" spacing="1|1">
   <Image slot="left" src={history1Image} alt="TBD" />

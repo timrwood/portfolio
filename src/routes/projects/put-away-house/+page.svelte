@@ -37,10 +37,10 @@
   import windowImage33 from './images/window-3-3.jpg';
   import windowImage34 from './images/window-3-4.jpg';
 
-  import { intro } from './data';
+  import project from './project';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <FullBleed image={fullBleedImage1} />
 

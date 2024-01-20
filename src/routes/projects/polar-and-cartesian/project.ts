@@ -2,8 +2,11 @@ import type { Project } from '$lib/types';
 
 import coverImage from './images/cover.jpg';
 
-export const project: Project = {
+export default {
   slug: 'polar-and-cartesian',
   title: 'Polars and Cartesian',
-  image: coverImage
-};
+  coverImage,
+  introImage: coverImage,
+  subtitle: [],
+  description: []
+} as Project;

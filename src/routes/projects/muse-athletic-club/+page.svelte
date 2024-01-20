@@ -26,10 +26,10 @@
   import sectionTallImage from './images/section-tall.png';
   import sitePlanImage from './images/site-plan.jpg';
 
-  import { intro } from './data';
+  import project from './project';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <FullBleed image={fullBleed1Image} />
 

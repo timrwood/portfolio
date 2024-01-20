@@ -9,10 +9,10 @@
   import square1Image from './images/square-1.jpg';
   import square2Image from './images/square-2.jpg';
 
-  import { intro } from './data';
+  import project from './project';
 </script>
 
-<Intro {intro} />
+<Intro {project} />
 
 <SplitView align="center" spacing="1|1">
   <Description slot="right">

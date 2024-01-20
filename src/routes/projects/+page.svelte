@@ -1,15 +1,15 @@
 <script lang="ts">
-  export let data;
+  import projects from './projects';
 </script>
 
 <div class="flex flex-wrap">
-  {#each data.projects as project}
+  {#each projects as project}
     <a
       href="/projects/{project.slug}"
       class="p-3 w-1/2 sm:w-1/3 lg:w-1/4 aspect-portrait relative group"
     >
       <img
-        src={project.image}
+        src={project.coverImage}
         alt="Full Bleed"
         class="w-full h-full object-cover rounded-lg group-hover:opacity-70"
       />

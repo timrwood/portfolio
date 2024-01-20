@@ -2,8 +2,11 @@ import type { Project } from '$lib/types';
 
 import coverImage from './images/cover.jpg';
 
-export const project: Project = {
+export default {
   slug: 'chicago-frame',
   title: 'Chicago Frame',
-  image: coverImage
-};
+  coverImage,
+  introImage: coverImage,
+  subtitle: [],
+  description: []
+} as Project;
