@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .bg-fixed {
+    background-attachment: scroll;
+  }
+}
