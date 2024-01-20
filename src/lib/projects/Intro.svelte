@@ -4,6 +4,10 @@
   export let project: Project;
 </script>
 
+<svelte:head>
+  <title>Tim Wood | {project.title}</title>
+</svelte:head>
+
 <div class="flex flex-col lg:flex-row items-center py-12 lg:py-24 px-3 gap-12 lg:gap-24">
   <div class="lg:w-1/2">
     <h2 class="font-bold text-3xl pb-4">{project.title}</h2>

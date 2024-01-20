@@ -2,6 +2,10 @@
   import projects from './projects';
 </script>
 
+<svelte:head>
+  <title>Tim Wood | Projects</title>
+</svelte:head>
+
 <div class="flex flex-wrap">
   {#each projects as project}
     <a
@@ -14,9 +18,9 @@
         class="w-full h-full object-cover rounded-lg group-hover:opacity-70"
       />
       <h2
-        class="absolute bottom-3 inset-x-3 flex justify-center items-center h-14 px-4 rounded-b-lg backdrop-blur-sm bg-white/50"
+        class="absolute bottom-3 inset-x-3 flex justify-center items-center h-14 px-2 rounded-b-lg backdrop-blur-sm bg-white/50"
       >
-        <div class="uppercase font-bold text-slate-800 leading-5">{project.title}</div>
+        <div class="uppercase font-bold text-slate-800 text-center leading-5">{project.title}</div>
       </h2>
     </a>
   {/each}
