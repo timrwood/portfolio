@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Caption, FullBleed, Image, Intro, SplitView } from '$lib/projects/index';
+  import { Caption, FullBleed, Image, Intro, SplitView, NextProject } from '$lib/projects/index';
 
   import diagramDayUseImage from './images/diagram-day-use.png';
   import diagramProgramImage from './images/diagram-program.png';
@@ -185,3 +185,5 @@
 </SplitView>
 
 <FullBleed image={fullBleed2Image} />
+
+<NextProject {project} />

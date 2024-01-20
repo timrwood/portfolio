@@ -1,5 +1,13 @@
 <script lang="ts">
-  import { Caption, FullBleed, Image, Intro, FourImages, SplitView } from '$lib/projects/index';
+  import {
+    Caption,
+    FullBleed,
+    Image,
+    Intro,
+    FourImages,
+    SplitView,
+    NextProject
+  } from '$lib/projects/index';
 
   import animationImage from './images/animation.webp';
   import coverImage from './images/cover.jpg';
@@ -138,3 +146,5 @@
     src4={warmupLargeBackImage}
   />
 </SplitView>
+
+<NextProject {project} />

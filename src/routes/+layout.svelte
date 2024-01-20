@@ -14,6 +14,6 @@
   </nav>
 </div>
 
-<div class="xl:container mx-auto pt-12 pb-24 px-3">
+<div class="xl:container mx-auto py-12 px-3">
   <slot />
 </div>

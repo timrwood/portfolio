@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Description, Image, Intro, SplitView } from '$lib/projects/index';
+  import { Description, Image, Intro, SplitView, NextProject } from '$lib/projects/index';
 
   import drawing1Image from './images/drawing-1.jpg';
   import drawing2Image from './images/drawing-2.jpg';
@@ -84,3 +84,5 @@
     alt="A doorway cutting through a previously bricked in window"
   />
 </SplitView>
+
+<NextProject {project} />

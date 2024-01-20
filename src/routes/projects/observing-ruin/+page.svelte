@@ -1,5 +1,13 @@
 <script lang="ts">
-  import { FullBleed, Image, Intro, SplitView, FourImages, Video } from '$lib/projects/index';
+  import {
+    FourImages,
+    FullBleed,
+    Image,
+    Intro,
+    NextProject,
+    SplitView,
+    Video
+  } from '$lib/projects/index';
   import FullBleedScroll from './FullBleedScroll.svelte';
 
   import conceptModelImage from './images/concept-model.jpg';
@@ -83,3 +91,5 @@
   <Image slot="left" src={materialFeltImage} alt="TBD" />
   <Image slot="right" src={materialAllImage} alt="TBD" />
 </SplitView>
+
+<NextProject {project} />

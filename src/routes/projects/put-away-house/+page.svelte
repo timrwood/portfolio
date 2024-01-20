@@ -1,5 +1,13 @@
 <script lang="ts">
-  import { Caption, FourImages, FullBleed, Image, Intro, SplitView } from '$lib/projects/index';
+  import {
+    Caption,
+    FourImages,
+    FullBleed,
+    Image,
+    Intro,
+    NextProject,
+    SplitView
+  } from '$lib/projects/index';
   import FullBleedScroll from './FullBleedScroll.svelte';
   import PlanAndImages from './PlanAndImages.svelte';
 
@@ -149,3 +157,5 @@
   </div>
   <Image slot="right" src={halfBleedImage1} alt="Model photo of the blank west facade" />
 </SplitView>
+
+<NextProject {project} />

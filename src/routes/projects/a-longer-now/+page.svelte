@@ -5,6 +5,7 @@
     FullBleed,
     Image,
     Intro,
+    NextProject,
     SplitView,
     Video
   } from '$lib/projects/index';
@@ -20,8 +21,8 @@
   import small3Image from './images/small-3.jpg';
   import small4Image from './images/small-4.jpg';
 
-  import project from './project';
   import LifetimeScales from './LifetimeScales.svelte';
+  import project from './project';
 </script>
 
 <Intro {project} />
@@ -150,3 +151,5 @@
 </SplitView>
 
 <FullBleed image={fullBleed2Image} />
+
+<NextProject {project} />
