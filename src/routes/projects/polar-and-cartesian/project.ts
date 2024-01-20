@@ -4,7 +4,7 @@ import coverImage from './images/cover.jpg';
 
 export default {
   slug: 'polar-and-cartesian',
-  title: 'Polars and Cartesian',
+  title: 'Polar and Cartesian',
   coverImage,
   introImage: coverImage,
   subtitle: [],
