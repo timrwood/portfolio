@@ -9,11 +9,11 @@
     <a href="/" class="text-xl p-3 tracking-widest">Tim Wood</a>
     <div class="shrink flex text-l text-slate-700">
       <a href="/projects" class="p-3">Projects</a>
-      <a href="/projects" class="p-3">About</a>
+      <a href="/about" class="p-3">About</a>
     </div>
   </nav>
 </div>
 
-<div class="xl:container mx-auto py-12 px-3">
+<div class="xl:container mx-auto py-16 px-3">
   <slot />
 </div>
