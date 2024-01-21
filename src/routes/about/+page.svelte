@@ -3,7 +3,7 @@
 </script>
 
 <div class="px-3">
-  <div class="flex sticky top-12 z-10 bg-slate-50/80 backdrop-blur-sm">
+  <div class="flex sticky top-12 z-10 py-4 bg-slate-50/90 backdrop-blur-sm text-sm font-bold">
     <div class="flex-1">Birth</div>
     <div class="flex-1">10</div>
     <div class="flex-1">20</div>
@@ -24,8 +24,10 @@
       </div>
     </div>
     {#each Object.entries(category.groups) as [name, events]}
-      <div class="relative h-6 border-t border-slate-300">
-        <div style="left:{nowPercent * 100}%;" class="absolute top-0 ml-4 font-serif italic">
+      <div
+        class="relative h-6 md:h-8 border-t border-slate-300 leading-6 md:leading-8 lg:leading-8 text-xs md:text-sm lg:text-base font-serif italic"
+      >
+        <div style="left:{nowPercent * 100}%;" class="absolute top-0 ml-4">
           {name}
         </div>
         {#each events as event}
