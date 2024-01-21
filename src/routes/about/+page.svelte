@@ -3,29 +3,31 @@
 </script>
 
 <div class="px-3">
-  <div class="flex sticky top-12 z-10 py-4 bg-slate-50/90 backdrop-blur-sm text-sm font-bold">
-    <div class="flex-1">Birth</div>
-    <div class="flex-1">10</div>
-    <div class="flex-1">20</div>
-    <div class="flex-1">30</div>
-    <div class="flex-1">40</div>
-    <div class="flex-1">50</div>
-    <div class="flex-1">60</div>
-    <div class="flex-1 flex justify-between">
+  <div class="sticky top-0 z-10 pb-2 pt-16 -mt-16 bg-slate-50 border-b border-slate-300">
+    <div class="flex justify-between text-sm">
+      <div>Birth</div>
+      <div>Death (projected)</div>
+    </div>
+    <div class="flex justify-between font-bold">
+      <div>0</div>
+      <div>10</div>
+      <div>20</div>
+      <div>30</div>
+      <div>40</div>
+      <div>50</div>
+      <div>60</div>
       <div>70</div>
-      <div>Death</div>
+      <div>80</div>
     </div>
   </div>
 
   {#each Object.values(categories) as category}
-    <div class="relative h-8 font-bold">
-      <div style="left:{nowPercent * 100}%;" class="absolute bottom-0 ml-4">
-        {category.name}
-      </div>
+    <div style="padding-left:{nowPercent * 100}%;" class="ml-4 font-bold text-lg pt-8 pb-2">
+      {category.name}
     </div>
     {#each Object.entries(category.groups) as [name, events]}
       <div
-        class="relative h-6 md:h-8 border-t border-slate-300 leading-6 md:leading-8 lg:leading-8 text-xs md:text-sm lg:text-base font-serif italic"
+        class="relative h-6 text-xs/6 md:h-8 md:text-sm/8 lg:text-base/8 border-t border-slate-300 font-serif italic"
       >
         <div style="left:{nowPercent * 100}%;" class="absolute top-0 ml-4">
           {name}

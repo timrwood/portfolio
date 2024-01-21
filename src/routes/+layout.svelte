@@ -2,7 +2,7 @@
   import '../app.css';
 </script>
 
-<div class="fixed inset-x-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+<div class="fixed inset-x-0 z-50 bg-slate-50/80 backdrop-blur-sm">
   <nav
     class="xl:container mx-auto flex justify-between px-3 uppercase leading-8 hover:text-slate-900"
   >
