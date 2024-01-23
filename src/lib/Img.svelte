@@ -4,7 +4,9 @@
   export let image: ImageWithLqip;
   export let alt: string;
 
-  let style = `background:url(data:image/webp;base64,${image.lqip}) no-repeat center/cover`;
+  let style = image.hasAlpha
+    ? ''
+    : `background:url(data:image/webp;base64,${image.lqip}) no-repeat center/cover`;
 </script>
 
-<img width={image.width} height={image.height} {alt} class={classNames} {style} />
+<img src={image.src} width={image.width} height={image.height} {alt} class={classNames} {style} />

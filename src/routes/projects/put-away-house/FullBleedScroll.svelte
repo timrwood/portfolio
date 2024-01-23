@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let image: string;
+  export let image: ImageWithLqip;
 </script>
 
 <div
@@ -9,5 +9,5 @@
     bg-repeat-x bg-center bg-fixed
     bg-[length:130%_auto] lg:bg-[length:110%_auto] min-[2000px]:bg-[length:2500px_auto]
   "
-  style="background-image:url({image})"
+  style="background-image:url({image.src})"
 ></div>

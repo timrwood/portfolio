@@ -1,6 +1,8 @@
 <script lang="ts">
-  export let src: string;
+  import Img from '$lib/Img.svelte';
+
+  export let src: ImageWithLqip;
   export let alt: string;
 </script>
 
-<img {src} {alt} class="block w-full" />
+<Img image={src} {alt} class="block w-full" />

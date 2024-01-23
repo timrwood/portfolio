@@ -1,12 +1,14 @@
 <script lang="ts">
-  import icon1Image from './images/icon-1.png';
-  import icon2Image from './images/icon-2.png';
-  import icon3Image from './images/icon-3.png';
-  import icon4Image from './images/icon-4.png';
-  import icon5Image from './images/icon-5.png';
-  import icon6Image from './images/icon-6.png';
-  import icon7Image from './images/icon-7.png';
-  import icon8Image from './images/icon-8.png';
+  import Img from '$lib/Img.svelte';
+
+  import icon1Image from './images/icon-1.png?as=lqip';
+  import icon2Image from './images/icon-2.png?as=lqip';
+  import icon3Image from './images/icon-3.png?as=lqip';
+  import icon4Image from './images/icon-4.png?as=lqip';
+  import icon5Image from './images/icon-5.png?as=lqip';
+  import icon6Image from './images/icon-6.png?as=lqip';
+  import icon7Image from './images/icon-7.png?as=lqip';
+  import icon8Image from './images/icon-8.png?as=lqip';
 
   let icons = [
     { space: 'Room', time: 'Individual', image: icon1Image },
@@ -28,7 +30,7 @@
 {#each icons as icon}
   <div class="flex items-center justify-around py-2">
     <div class="font-serif text-m italic pr-4 text-right w-1/2">{icon.space}</div>
-    <img src={icon.image} alt="Pen drawing of {icon.space}" class="w-16 h-16" />
+    <Img image={icon.image} alt="Pen drawing of {icon.space}" class="w-16 h-16" />
     <div class="font-serif text-m italic pl-4 text-left w-1/2">{icon.time}</div>
   </div>
 {/each}
