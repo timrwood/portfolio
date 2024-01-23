@@ -1,7 +1,9 @@
-import type { Project } from '$lib/types';
+// import type { Project } from '$lib/types';
 
-import coverImage from './images/cover.jpg';
-import introImage from './images/intro.jpg';
+import coverImage from './images/cover.jpg?cover';
+import introImage from './images/intro.jpg?intro';
+
+console.log(introImage);
 
 export default {
   slug: 'put-away-house',
