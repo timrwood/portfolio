@@ -2,9 +2,15 @@
   import categories, { nowPercent } from './events';
 </script>
 
+<svelte:head>
+  <title>Tim Wood | About Me</title>
+</svelte:head>
+
 <div class="px-3">
+  <h2 class="font-bold text-3xl py-8 mb-16 text-center tracking-widest uppercase">About Me</h2>
+
   <div class="sticky top-0 z-10 pb-2 pt-16 -mt-16 bg-slate-50 border-b border-slate-300">
-    <div class="flex justify-between text-sm">
+    <div class="flex justify-between text-sm sm:text-base">
       <div>Birth</div>
       <div>Death (projected)</div>
     </div>

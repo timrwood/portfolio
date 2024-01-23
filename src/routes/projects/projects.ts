@@ -13,17 +13,20 @@ import twelveBrickWalls from './twelve-brick-walls/project';
 import polarAndCartesian from './polar-and-cartesian/project';
 import verticalAndHorizontal from './vertical-and-horizontal/project';
 
+const TBD = [
+  singleParent,
+  museumMarket,
+  theMonasticPath,
+  chicagoFrame,
+  polarAndCartesian,
+  verticalAndHorizontal
+];
+
 export default [
   putAwayHouse,
   aLongerNow,
   brickedIn,
   museAthleticClub,
   observingRuin,
-  singleParent,
-  museumMarket,
-  theMonasticPath,
-  chicagoFrame,
-  twelveBrickWalls,
-  polarAndCartesian,
-  verticalAndHorizontal
+  twelveBrickWalls
 ] as Project[];

@@ -6,6 +6,8 @@
   <title>Tim Wood | Projects</title>
 </svelte:head>
 
+<h2 class="font-bold text-3xl py-8 text-center tracking-widest uppercase">Projects</h2>
+
 <div class="flex flex-wrap">
   {#each projects as project}
     <a
