@@ -1,6 +1,4 @@
-import type { Project } from '$lib/types';
-
-import coverImage from './images/cover.jpg';
+import coverImage from './images/cover.jpg?as=lqip';
 
 export default {
   slug: 'single-parent',

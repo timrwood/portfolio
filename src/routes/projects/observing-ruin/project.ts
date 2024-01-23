@@ -1,7 +1,5 @@
-import type { Project } from '$lib/types';
-
-import coverImage from './images/cover.jpg';
-import introImage from './images/intro.jpg';
+import coverImage from './images/cover.jpg?as=lqip';
+import introImage from './images/intro.jpg?as=lqip';
 
 export default {
   slug: 'observing-ruin',

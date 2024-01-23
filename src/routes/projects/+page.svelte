@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Img from '$lib/Img.svelte';
+
   import projects from './projects';
 </script>
 
@@ -14,9 +16,9 @@
       href="/projects/{project.slug}"
       class="p-3 w-1/2 sm:w-1/3 lg:w-1/4 aspect-portrait relative group"
     >
-      <img
-        src={project.coverImage}
-        alt="Full Bleed"
+      <Img
+        image={project.coverImage}
+        alt="{project.title} cover image"
         class="w-full h-full object-cover rounded-lg group-hover:opacity-70"
       />
       <h2

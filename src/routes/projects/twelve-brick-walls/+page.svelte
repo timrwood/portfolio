@@ -10,11 +10,11 @@
   } from '$lib/projects/index';
 
   import animationImage from './images/animation.webp';
-  import coverImage from './images/cover.jpg';
+  import coverImage from './images/cover.jpg?as=lqip';
   import elevationsImage from './images/elevations.jpg';
   import explodedImage from './images/exploded.jpg';
   import fullBleedImage from './images/full-bleed.jpg';
-  import introImage from './images/intro.jpg';
+  import introImage from './images/intro.jpg?as=lqip';
   import isoImage from './images/iso.jpg';
   import midtermElevationLongImage from './images/midterm-elevation-long.jpg';
   import midtermElevationShortImage from './images/midterm-elevation-short.jpg';

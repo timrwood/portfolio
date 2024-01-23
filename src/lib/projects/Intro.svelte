@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Img from '$lib/Img.svelte';
+
   export let project: Project;
 </script>
 
@@ -17,11 +19,6 @@
     {/each}
   </div>
   <div class="lg:w-1/2">
-    <img
-      src={project.introImage.src}
-      width={project.introImage.width}
-      height={project.introImage.height}
-      alt="Intro"
-    />
+    <Img image={project.introImage} alt="{project.title} Intro" />
   </div>
 </div>

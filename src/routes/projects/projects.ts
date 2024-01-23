@@ -1,5 +1,3 @@
-import type { Project } from '$lib/types';
-
 import putAwayHouse from './put-away-house/project';
 import brickedIn from './bricked-in/project';
 import museAthleticClub from './muse-athletic-club/project';

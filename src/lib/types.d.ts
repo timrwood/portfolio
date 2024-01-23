@@ -1,24 +1,23 @@
+// import { Metadata, Sharp } from 'sharp/lib/types.d';
+
 type Project = {
   slug: string;
   title: string;
-  coverImage: ImageMetadata;
-  introImage: ImageMetadata;
+  coverImage: ImageWithLqip;
+  introImage: ImageWithLqip;
   subtitle: string[];
   description: string[];
 };
 
-type ImageMetadata = {
+type ImageWithLqip = {
   src: string;
   width: number;
   height: number;
+  format: string;
+  hasAlpha: boolean;
+  lqip: string;
 };
-
-declare module '*?intro' {
-  var img: ImageWithMetadata;
-  export default img;
-}
-
-declare module '*?cover' {
-  var img: ImageWithMetadata;
+declare module '*?as=lqip' {
+  var img: ImageWithLqip;
   export default img;
 }
