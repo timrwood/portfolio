@@ -1,6 +1,4 @@
 <script lang="ts">
-  import type { Project } from '$lib/types';
-
   export let project: Project;
 </script>
 
@@ -19,6 +17,11 @@
     {/each}
   </div>
   <div class="lg:w-1/2">
-    <img src={project.introImage} alt="Intro" />
+    <img
+      src={project.introImage.src}
+      width={project.introImage.width}
+      height={project.introImage.height}
+      alt="Intro"
+    />
   </div>
 </div>
