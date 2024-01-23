@@ -19,6 +19,6 @@
     {/each}
   </div>
   <div class="lg:w-1/2">
-    <Img image={project.introImage} alt="{project.title} Intro" />
+    <Img image={project.introImage} alt="{project.title} Intro" fetchpriority="high" />
   </div>
 </div>
