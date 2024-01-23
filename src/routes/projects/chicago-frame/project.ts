@@ -1,4 +1,4 @@
-import coverImage from './images/cover.jpg?as=lqip';
+import coverImage from './images/cover.jpg?as=withColor';
 
 export default {
   slug: 'chicago-frame',

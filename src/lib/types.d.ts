@@ -3,21 +3,21 @@
 type Project = {
   slug: string;
   title: string;
-  coverImage: ImageWithLqip;
-  introImage: ImageWithLqip;
+  coverImage: ImageWithColor;
+  introImage: ImageWithColor;
   subtitle: string[];
   description: string[];
 };
 
-type ImageWithLqip = {
+type ImageWithColor = {
   src: string;
   width: number;
   height: number;
   format: string;
   hasAlpha: boolean;
-  lqip: string;
+  color: string;
 };
-declare module '*?as=lqip' {
-  var img: ImageWithLqip;
+declare module '*?as=withColor' {
+  var img: ImageWithColor;
   export default img;
 }

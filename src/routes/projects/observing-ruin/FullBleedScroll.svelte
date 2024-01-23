@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let image: ImageWithLqip;
+  export let image: ImageWithColor;
 </script>
 
 <div

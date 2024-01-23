@@ -2,15 +2,14 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 
-function lqip() {
+function withColor() {
   return async function (metadatas: any) {
     const { format, width, height, hasAlpha, src, image } = metadatas[0];
 
-    const buffer = await image
-      .clone()
-      .resize({ width: 16 })
-      .toFormat('webp', { quality: 20 })
-      .toBuffer();
+    const { dominant } = await image.stats();
+    const r = Math.min(240, dominant.r);
+    const g = Math.min(230, dominant.g);
+    const b = Math.min(230, dominant.b);
 
     return {
       width,
@@ -18,8 +17,8 @@ function lqip() {
       src,
       format,
       hasAlpha,
-      lqip: buffer.toString('base64')
-    } as ImageWithLqip;
+      color: '#' + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)
+    } as ImageWithColor;
   };
 }
 
@@ -28,7 +27,7 @@ export default defineConfig({
     sveltekit(),
     imagetools({
       extendOutputFormats(builtins) {
-        return { ...builtins, lqip };
+        return { ...builtins, withColor };
       }
     })
   ]

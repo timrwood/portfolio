@@ -1,30 +1,30 @@
 <script lang="ts">
   import { Caption, FullBleed, Image, Intro, SplitView, NextProject } from '$lib/projects/index';
 
-  import diagramDayUseImage from './images/diagram-day-use.png?as=lqip';
-  import diagramProgramImage from './images/diagram-program.png?as=lqip';
-  import diagramViewsArtImage from './images/diagram-views-art.png?as=lqip';
-  import diagramViewsShuffleImage from './images/diagram-views-shuffle.png?as=lqip';
-  import diagramViewsTrackImage from './images/diagram-views-track.png?as=lqip';
-  import diagramViewsImage from './images/diagram-views.png?as=lqip';
-  import fullBleed1Image from './images/full-bleed-1.jpg?as=lqip';
-  import fullBleed2Image from './images/full-bleed-2.jpg?as=lqip';
-  import perspectiveArtLImage from './images/perspective-art-l.jpg?as=lqip';
-  import perspectiveArtRImage from './images/perspective-art-r.jpg?as=lqip';
-  import perspectiveGroundLImage from './images/perspective-ground-l.jpg?as=lqip';
-  import perspectiveGroundRImage from './images/perspective-ground-r.jpg?as=lqip';
-  import perspectiveShuffleLImage from './images/perspective-shuffle-l.jpg?as=lqip';
-  import perspectiveShuffleRImage from './images/perspective-shuffle-r.jpg?as=lqip';
-  import perspectiveTrackLImage from './images/perspective-track-l.jpg?as=lqip';
-  import perspectiveTrackRImage from './images/perspective-track-r.jpg?as=lqip';
-  import plansAllImage from './images/plans-all.png?as=lqip';
-  import plansArtImage from './images/plans-art.png?as=lqip';
-  import plansGroundImage from './images/plans-ground.jpg?as=lqip';
-  import plansShuffleImage from './images/plans-shuffle.png?as=lqip';
-  import plansTrackImage from './images/plans-track.png?as=lqip';
-  import sectionFullBleedImage from './images/section-full-bleed.jpg?as=lqip';
-  import sectionTallImage from './images/section-tall.png?as=lqip';
-  import sitePlanImage from './images/site-plan.jpg?as=lqip';
+  import diagramDayUseImage from './images/diagram-day-use.png?as=withColor';
+  import diagramProgramImage from './images/diagram-program.png?as=withColor';
+  import diagramViewsArtImage from './images/diagram-views-art.png?as=withColor';
+  import diagramViewsShuffleImage from './images/diagram-views-shuffle.png?as=withColor';
+  import diagramViewsTrackImage from './images/diagram-views-track.png?as=withColor';
+  import diagramViewsImage from './images/diagram-views.png?as=withColor';
+  import fullBleed1Image from './images/full-bleed-1.jpg?as=withColor';
+  import fullBleed2Image from './images/full-bleed-2.jpg?as=withColor';
+  import perspectiveArtLImage from './images/perspective-art-l.jpg?as=withColor';
+  import perspectiveArtRImage from './images/perspective-art-r.jpg?as=withColor';
+  import perspectiveGroundLImage from './images/perspective-ground-l.jpg?as=withColor';
+  import perspectiveGroundRImage from './images/perspective-ground-r.jpg?as=withColor';
+  import perspectiveShuffleLImage from './images/perspective-shuffle-l.jpg?as=withColor';
+  import perspectiveShuffleRImage from './images/perspective-shuffle-r.jpg?as=withColor';
+  import perspectiveTrackLImage from './images/perspective-track-l.jpg?as=withColor';
+  import perspectiveTrackRImage from './images/perspective-track-r.jpg?as=withColor';
+  import plansAllImage from './images/plans-all.png?as=withColor';
+  import plansArtImage from './images/plans-art.png?as=withColor';
+  import plansGroundImage from './images/plans-ground.jpg?as=withColor';
+  import plansShuffleImage from './images/plans-shuffle.png?as=withColor';
+  import plansTrackImage from './images/plans-track.png?as=withColor';
+  import sectionFullBleedImage from './images/section-full-bleed.jpg?as=withColor';
+  import sectionTallImage from './images/section-tall.png?as=withColor';
+  import sitePlanImage from './images/site-plan.jpg?as=withColor';
 
   import project from './project';
 </script>

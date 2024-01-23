@@ -1,10 +1,10 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
 
-  export let src1: ImageWithLqip;
-  export let src2: ImageWithLqip;
-  export let src3: ImageWithLqip;
-  export let src4: ImageWithLqip;
+  export let src1: ImageWithColor;
+  export let src2: ImageWithColor;
+  export let src3: ImageWithColor;
+  export let src4: ImageWithColor;
 
   export let alt1: string;
   export let alt2: string;

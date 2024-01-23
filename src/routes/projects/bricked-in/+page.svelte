@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Description, Image, Intro, SplitView, NextProject } from '$lib/projects/index';
 
-  import drawing1Image from './images/drawing-1.jpg?as=lqip';
-  import drawing2Image from './images/drawing-2.jpg?as=lqip';
-  import large1Image from './images/large-1.jpg?as=lqip';
-  import large2Image from './images/large-2.jpg?as=lqip';
-  import large3Image from './images/large-3.jpg?as=lqip';
-  import square1Image from './images/square-1.jpg?as=lqip';
-  import square2Image from './images/square-2.jpg?as=lqip';
+  import drawing1Image from './images/drawing-1.jpg?as=withColor';
+  import drawing2Image from './images/drawing-2.jpg?as=withColor';
+  import large1Image from './images/large-1.jpg?as=withColor';
+  import large2Image from './images/large-2.jpg?as=withColor';
+  import large3Image from './images/large-3.jpg?as=withColor';
+  import square1Image from './images/square-1.jpg?as=withColor';
+  import square2Image from './images/square-2.jpg?as=withColor';
 
   import project from './project';
 </script>

@@ -2,11 +2,11 @@
   import Img from '$lib/Img.svelte';
   import { SplitView } from '$lib/projects';
 
-  export let plan: ImageWithLqip;
-  export let photo1: ImageWithLqip;
-  export let photo2: ImageWithLqip;
-  export let photo3: ImageWithLqip;
-  export let photo4: ImageWithLqip;
+  export let plan: ImageWithColor;
+  export let photo1: ImageWithColor;
+  export let photo2: ImageWithColor;
+  export let photo3: ImageWithColor;
+  export let photo4: ImageWithColor;
   export let title: string;
   export let subtitle: string;
 </script>

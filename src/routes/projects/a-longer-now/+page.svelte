@@ -10,16 +10,16 @@
     Video
   } from '$lib/projects/index';
 
-  import centeredImage from './images/centered.jpg?as=lqip';
-  import fullBleed1Image from './images/full-bleed-1.jpg?as=lqip';
-  import fullBleed2Image from './images/full-bleed-2.jpg?as=lqip';
-  import historyImage from './images/history.png?as=lqip';
-  import namesImage from './images/names.png?as=lqip';
-  import overheadImage from './images/overhead.jpg?as=lqip';
-  import small1Image from './images/small-1.jpg?as=lqip';
-  import small2Image from './images/small-2.jpg?as=lqip';
-  import small3Image from './images/small-3.jpg?as=lqip';
-  import small4Image from './images/small-4.jpg?as=lqip';
+  import centeredImage from './images/centered.jpg?as=withColor';
+  import fullBleed1Image from './images/full-bleed-1.jpg?as=withColor';
+  import fullBleed2Image from './images/full-bleed-2.jpg?as=withColor';
+  import historyImage from './images/history.png?as=withColor';
+  import namesImage from './images/names.png?as=withColor';
+  import overheadImage from './images/overhead.jpg?as=withColor';
+  import small1Image from './images/small-1.jpg?as=withColor';
+  import small2Image from './images/small-2.jpg?as=withColor';
+  import small3Image from './images/small-3.jpg?as=withColor';
+  import small4Image from './images/small-4.jpg?as=withColor';
 
   import LifetimeScales from './LifetimeScales.svelte';
   import project from './project';

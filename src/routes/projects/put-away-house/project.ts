@@ -1,5 +1,5 @@
-import coverImage from './images/cover.jpg?as=lqip';
-import introImage from './images/intro.jpg?as=lqip';
+import coverImage from './images/cover.jpg?as=withColor';
+import introImage from './images/intro.jpg?as=withColor';
 
 export default {
   slug: 'put-away-house',

@@ -1,14 +1,14 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
 
-  import icon1Image from './images/icon-1.png?as=lqip';
-  import icon2Image from './images/icon-2.png?as=lqip';
-  import icon3Image from './images/icon-3.png?as=lqip';
-  import icon4Image from './images/icon-4.png?as=lqip';
-  import icon5Image from './images/icon-5.png?as=lqip';
-  import icon6Image from './images/icon-6.png?as=lqip';
-  import icon7Image from './images/icon-7.png?as=lqip';
-  import icon8Image from './images/icon-8.png?as=lqip';
+  import icon1Image from './images/icon-1.png?as=withColor';
+  import icon2Image from './images/icon-2.png?as=withColor';
+  import icon3Image from './images/icon-3.png?as=withColor';
+  import icon4Image from './images/icon-4.png?as=withColor';
+  import icon5Image from './images/icon-5.png?as=withColor';
+  import icon6Image from './images/icon-6.png?as=withColor';
+  import icon7Image from './images/icon-7.png?as=withColor';
+  import icon8Image from './images/icon-8.png?as=withColor';
 
   let icons = [
     { space: 'Room', time: 'Individual', image: icon1Image },
