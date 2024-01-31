@@ -1,4 +1,12 @@
 <script>
+  import { SplitView, Image } from '$lib/projects';
+  import LinkedInLogo from './LinkedInLogo.svelte';
+  import InstagramLogo from './InstagramLogo.svelte';
+  import DribbbleLogo from './DribbbleLogo.svelte';
+  import GitHubLogo from './GitHubLogo.svelte';
+
+  import profileImage from './images/profile.jpg?as=withColor';
+
   import categories, { nowPercent } from './events';
 </script>
 
@@ -6,8 +14,49 @@
   <title>Tim Wood | About Me</title>
 </svelte:head>
 
+<SplitView spacing="1|2">
+  <div slot="left">
+    <Image src={profileImage} alt="A portrait of Tim Wood" />
+    <div class="flex pt-12 justify-center">
+      <a href="https://www.linkedin.com/in/trwood/" class="p-3 hover:text-slate-600">
+        <LinkedInLogo />
+      </a>
+      <a href="https://www.instagram.com/timrwood" class="p-3 hover:text-slate-600">
+        <InstagramLogo />
+      </a>
+      <a href="https://dribbble.com/timrwood" class="p-3 hover:text-slate-600">
+        <DribbbleLogo />
+      </a>
+      <a href="https://github.com/timrwood" class="p-3 hover:text-slate-600">
+        <GitHubLogo />
+      </a>
+    </div>
+  </div>
+  <div slot="right">
+    <h2 class="font-bold text-4xl pb-6 uppercase">Hi, I'm Tim</h2>
+    <h3 class="font-bold text-2xl pb-6">A software developer who turned to architecture.</h3>
+    <div class="space-y-6 font-serif max-w-prose leading-loose text-pretty">
+      <p>
+        My interest in a career in architecture began in high school, but unfortunately, I did not
+        pursue it at that time. Instead, I studied film production and moved to Los Angeles to try
+        my hand in the industry. In my spare time, I was painting and drawing, following lessons
+        learned from an art tutor in my childhood. To show off my artwork, I learned how to build a
+        website, and as I continued to build those skills, found work in web design and development.
+      </p>
+      <p>
+        For a little over a decade, I worked as a software developer, all the while regretting not
+        pursuing architecture. After my personal and professional life stabilized, I decided to go
+        back to school. For the past six years, I've been studying full-time at UIC, first in
+        undergrad and now at the graduate level, while also working full-time as a software
+        developer to support myself and my family.
+      </p>
+      <p>I plan to graduate December 2024, and am looking forward to the start of a new career.</p>
+    </div>
+  </div>
+</SplitView>
+
 <div class="px-3">
-  <h2 class="font-bold text-3xl py-8 mb-16 text-center tracking-widest uppercase">About Me</h2>
+  <h2 class="font-bold text-3xl pb-16 tracking-widest uppercase">Life Timeline</h2>
 
   <div class="sticky top-0 z-10 pb-2 pt-16 -mt-16 bg-slate-50 border-b border-slate-300">
     <div class="flex justify-between text-sm sm:text-base">
