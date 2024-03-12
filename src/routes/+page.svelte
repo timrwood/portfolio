@@ -21,13 +21,11 @@
     style="background-image:url({gridInnerImage})"
   >
     <h1 class="text-xl sm:text-3xl tracking-widest uppercase font-bold">Tim Wood</h1>
-    <h2 class="text-md sm:text-2xl tracking-widest font-serif italic pt-2">
+    <h2 class="text-md sm:text-2xl tracking-widest font-serif italic pt-2 pb-6">
       Architecture Portfolio
     </h2>
-    <a class="text-sm sm:text-xl tracking-widest pt-8 underline" href="/projects"
-      >View projects online</a
-    >
-    <a class="text-sm sm:text-xl tracking-widest pt-4" href="/portfolio">
+    <a class="text-sm sm:text-xl p-1 sm:p-2 block underline" href="/projects"> View online </a>
+    <a class="text-sm sm:text-xl p-1 sm:p-2 block" href="/portfolio">
       <svg
         class="inline"
         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +37,7 @@
           d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h8Zm4 18V9h-5V4H6v16h12Zm-2-5-4 4-4-4 1.4-1.4 1.6 1.6V11h2v4.2l1.6-1.6L16 15Z"
         />
       </svg>
-      <span class="underline">Download portfolio as PDF</span>
+      <span class="underline">Download as PDF</span>
     </a>
   </div>
 </div>
