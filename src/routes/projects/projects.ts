@@ -10,6 +10,7 @@ import chicagoFrame from './chicago-frame/project';
 import twelveBrickWalls from './twelve-brick-walls/project';
 import polarAndCartesian from './polar-and-cartesian/project';
 import verticalAndHorizontal from './vertical-and-horizontal/project';
+import tinyHouses from './tiny-houses/project';
 
 const TBD = [
   singleParent,
@@ -26,5 +27,6 @@ export default [
   brickedIn,
   museAthleticClub,
   observingRuin,
-  twelveBrickWalls
+  twelveBrickWalls,
+  tinyHouses
 ] as Project[];

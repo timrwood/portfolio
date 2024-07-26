@@ -40,3 +40,10 @@ You can preview the production build with `npm run preview`.
 # Old Site:
 
 https://timwood.netlify.app/
+
+# Common image sizes:
+
+Cover: 640x960
+Intro: 1280x1280
+Square: 1280x1280
+Full Bleed: 3000x2000

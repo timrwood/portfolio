@@ -10,5 +10,7 @@ function camelCase(str) {
 }
 
 readdirSync(process.argv[2]).forEach((file) => {
-  console.log(`import ${camelCase(file.replace(/\..+/, ''))}Image from "./images/${file}";`);
+  console.log(
+    `import ${camelCase(file.replace(/\..+/, ''))}Image from "./images/${file}?as=withColor";`
+  );
 });
