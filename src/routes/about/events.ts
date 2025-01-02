@@ -85,7 +85,7 @@ addEvent('Housing', '2016-02', toPresent, 'House');
 addEvent('Education', '1991-07', '2004-05', 'Home School');
 addEvent('Education', '2004-08', '2006-05', 'Private Undergraduate');
 addEvent('Education', '2018-08', '2022-05', 'Public Undergraduate');
-addEvent('Education', '2022-08', toPresent, 'Public Graduate');
+addEvent('Education', '2022-08', '2024-12', 'Public Graduate');
 
 addEvent('Employer', '1999-07', '2001-07', 'Organic Farm');
 addEvent('Employer', '2001-08', '2004-07', 'Sandwich Shop');

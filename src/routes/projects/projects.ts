@@ -11,6 +11,7 @@ import twelveBrickWalls from './twelve-brick-walls/project';
 import polarAndCartesian from './polar-and-cartesian/project';
 import verticalAndHorizontal from './vertical-and-horizontal/project';
 import tinyHouses from './tiny-houses/project';
+import playFrame from './play-frame/project';
 
 const TBD = [
   singleParent,
@@ -18,15 +19,16 @@ const TBD = [
   theMonasticPath,
   chicagoFrame,
   polarAndCartesian,
-  verticalAndHorizontal
+  verticalAndHorizontal,
+  tinyHouses
 ];
 
 export default [
+  playFrame,
   putAwayHouse,
   aLongerNow,
   brickedIn,
   museAthleticClub,
   observingRuin,
-  twelveBrickWalls,
-  tinyHouses
+  twelveBrickWalls
 ] as Project[];
