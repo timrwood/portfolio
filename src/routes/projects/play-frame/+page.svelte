@@ -20,6 +20,11 @@
   import square3Image from "./images/square-3.jpg?as=withColor";
   import square4Image from "./images/square-4.jpg?as=withColor";
   import square5Image from "./images/square-5.jpg?as=withColor";
+  import plan1Image from "./images/plan-1.png?as=withColor";
+  import plan2Image from "./images/plan-2.png?as=withColor";
+  import plan3Image from "./images/plan-3.png?as=withColor";
+  import plan4Image from "./images/plan-4.png?as=withColor";
+
 
   import project from './project';
 </script>
@@ -45,6 +50,16 @@
     src4={square3Image}
     alt4="A view through the space between the rafters and collar ties, from one end of the structure to the other"
   />
+</SplitView>
+
+<SplitView align="center" spacing="1|1">
+  <Image slot="left" src={plan1Image} alt="TBD" />
+  <Image slot="right" src={plan2Image} alt="TBD" />
+</SplitView>
+
+<SplitView align="center" spacing="1|1">
+  <Image slot="left" src={plan3Image} alt="TBD" />
+  <Image slot="right" src={plan4Image} alt="TBD" />
 </SplitView>
 
 <FullBleed image={fullBleed2Image} />
