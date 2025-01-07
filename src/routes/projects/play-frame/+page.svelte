@@ -10,21 +10,24 @@
     Video
   } from '$lib/projects/index';
 
-  import roofSummerImage from './images/roof-summer.jpg?as=withColor';
-  import roofWinterImage from './images/roof-winter.jpg?as=withColor';
+  import elevation1Image from './images/elevation-1.png?as=withColor';
+  import elevation2Image from './images/elevation-2.png?as=withColor';
   import fullBleed1Image from './images/full-bleed-1.jpg?as=withColor';
   import fullBleed2Image from './images/full-bleed-2.jpg?as=withColor';
   import fullBleed3Image from './images/full-bleed-3.jpg?as=withColor';
-  import square1Image from "./images/square-1.jpg?as=withColor";
-  import square2Image from "./images/square-2.jpg?as=withColor";
-  import square3Image from "./images/square-3.jpg?as=withColor";
-  import square4Image from "./images/square-4.jpg?as=withColor";
-  import square5Image from "./images/square-5.jpg?as=withColor";
-  import plan1Image from "./images/plan-1.png?as=withColor";
-  import plan2Image from "./images/plan-2.png?as=withColor";
-  import plan3Image from "./images/plan-3.png?as=withColor";
-  import plan4Image from "./images/plan-4.png?as=withColor";
-
+  import plan1Image from './images/plan-1.png?as=withColor';
+  import plan2Image from './images/plan-2.png?as=withColor';
+  import plan3Image from './images/plan-3.png?as=withColor';
+  import plan4Image from './images/plan-4.png?as=withColor';
+  import roofSummerImage from './images/roof-summer.jpg?as=withColor';
+  import roofWinterImage from './images/roof-winter.jpg?as=withColor';
+  import section1Image from './images/section-1.png?as=withColor';
+  import section2Image from './images/section-2.png?as=withColor';
+  import square1Image from './images/square-1.jpg?as=withColor';
+  import square2Image from './images/square-2.jpg?as=withColor';
+  import square3Image from './images/square-3.jpg?as=withColor';
+  import square4Image from './images/square-4.jpg?as=withColor';
+  import square5Image from './images/square-5.jpg?as=withColor';
 
   import project from './project';
 </script>
@@ -32,6 +35,16 @@
 <Intro {project} />
 
 <FullBleed image={fullBleed1Image} />
+
+<SplitView align="center" spacing="1|1">
+  <Image slot="left" src={elevation1Image} alt="TBD" />
+  <Image slot="right" src={elevation2Image} alt="TBD" />
+</SplitView>
+
+<SplitView align="center" spacing="1|1">
+  <Image slot="left" src={section1Image} alt="TBD" />
+  <Image slot="right" src={section2Image} alt="TBD" />
+</SplitView>
 
 <SplitView align="center" spacing="1|1">
   <Image
