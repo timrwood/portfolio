@@ -100,6 +100,7 @@ addEvent('Employer', '2013-01', '2015-05', 'Cocktail Recipe App');
 addEvent('Employer', '2014-09', '2015-10', 'Social Media Platform');
 addEvent('Employer', '2015-10', '2021-12', 'Fintech Startup');
 addEvent('Employer', '2022-01', '2022-09', 'Hospitality Startup');
+addEvent('Employer', '2024-05', '2024-09', 'Architecture Firm');
 addEvent('Employer', '2022-10', toPresent, 'Fintech Startup');
 
 export default categories;
