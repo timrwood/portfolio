@@ -6,6 +6,10 @@
 
 <svelte:head>
   <title>Tim Wood | {project.title}</title>
+  <meta property="og:title" content={project.title} />
+  <meta property="og:image" content={project.introImage.src} />
+  <meta property="og:site_name" content="Tim Wood" />
+  <meta name="description" content={project.description.join('\n')} />
 </svelte:head>
 
 <div class="flex flex-col lg:flex-row items-center py-12 lg:py-24 px-3 gap-12 lg:gap-24">
