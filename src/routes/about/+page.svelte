@@ -2,8 +2,7 @@
   import { SplitView, Image } from '$lib/projects';
   import LinkedInLogo from './LinkedInLogo.svelte';
   import InstagramLogo from './InstagramLogo.svelte';
-  import DribbbleLogo from './DribbbleLogo.svelte';
-  import GitHubLogo from './GitHubLogo.svelte';
+  import BlueskyLogo from './BlueskyLogo.svelte';
 
   import profileImage from './images/profile.jpg?as=withColor';
 
@@ -16,7 +15,7 @@
 
 <SplitView spacing="1|2">
   <div slot="left">
-    <Image src={profileImage} alt="A portrait of Tim Wood" />
+    <Image src={profileImage} alt="A portrait of Tim Wood" className="rounded-full" />
     <div class="flex pt-12 justify-center">
       <a href="https://www.linkedin.com/in/trwood/" class="p-3 hover:text-slate-600">
         <LinkedInLogo />
@@ -24,11 +23,8 @@
       <a href="https://www.instagram.com/timrwood" class="p-3 hover:text-slate-600">
         <InstagramLogo />
       </a>
-      <a href="https://dribbble.com/timrwood" class="p-3 hover:text-slate-600">
-        <DribbbleLogo />
-      </a>
-      <a href="https://github.com/timrwood" class="p-3 hover:text-slate-600">
-        <GitHubLogo />
+      <a href="https://bsky.app/profile/timwood.work" class="p-3 hover:text-slate-600">
+        <BlueskyLogo />
       </a>
     </div>
   </div>
