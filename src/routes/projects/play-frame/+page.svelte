@@ -1,14 +1,5 @@
 <script lang="ts">
-  import {
-    Description,
-    FourImages,
-    FullBleed,
-    Image,
-    Intro,
-    NextProject,
-    SplitView,
-    Video
-  } from '$lib/projects/index';
+  import { FourImages, FullBleed, Image, Intro, NextProject, SplitView } from '$lib/projects/index';
 
   import elevation1Image from './images/elevation-1.png?as=withColor';
   import elevation2Image from './images/elevation-2.png?as=withColor';
