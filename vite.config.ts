@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
@@ -24,6 +25,7 @@ function withColor() {
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     sveltekit(),
     imagetools({
       extendOutputFormats(builtins) {
