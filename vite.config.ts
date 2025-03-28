@@ -28,6 +28,9 @@ export default defineConfig({
     tailwindcss(),
     sveltekit(),
     imagetools({
+      cache: {
+        enabled: false
+      },
       extendOutputFormats(builtins) {
         return { ...builtins, withColor };
       }

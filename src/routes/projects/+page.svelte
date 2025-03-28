@@ -14,7 +14,7 @@
   {#each projects as project}
     <a
       href="/projects/{project.slug}"
-      class="p-3 w-1/2 sm:w-1/3 lg:w-1/4 aspect-portrait relative group"
+      class="p-3 w-1/2 sm:w-1/3 lg:w-1/4 aspect-[2/3] relative group"
     >
       <Img
         image={project.coverImage}

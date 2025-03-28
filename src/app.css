@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Poppins', 'sans-serif';
+  --font-serif: 'Libre Baskerville', 'serif';
+}
 
 @supports (-webkit-overflow-scrolling: touch) {
   .bg-fixed {
