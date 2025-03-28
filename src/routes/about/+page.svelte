@@ -140,7 +140,7 @@
           <div
             style="left:{event.startPercent * 100}%;right:{(1 - event.endPercent) * 100}%;"
             class="absolute top-0 bottom-0 bg-slate-300"
-         ></div>
+          ></div>
         {/each}
       </div>
     {/each}

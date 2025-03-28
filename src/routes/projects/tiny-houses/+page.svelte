@@ -43,5 +43,4 @@
   />
 </SplitView>
 
-
 <NextProject {project} />
