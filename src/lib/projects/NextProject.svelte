@@ -2,19 +2,23 @@
   import Img from '$lib/Img.svelte';
   import projects from '../../routes/projects/projects';
 
-  export let project: Project;
+  interface Props {
+    project: Project;
+  }
+
+  let { project }: Props = $props();
 
   const projectIndex = projects.findIndex((p) => p.slug === project.slug);
   const nextProject = projects[projectIndex + 1] || projects[0];
 </script>
 
-<a href="/projects/{nextProject.slug}" class="flex gap-8 items-center px-3 pt-24 pb-12">
-  <div class="w-1/3 md:w-1/2 flex justify-end">
+<a href="/projects/{nextProject.slug}" class="flex items-center gap-8 px-3 pt-24 pb-12">
+  <div class="flex w-1/3 justify-end md:w-1/2">
     <Img image={nextProject.introImage} alt="Intro" class="md:w-1/2" />
   </div>
   <div class="w-2/3 md:w-1/2">
     <p class="font-serif italic">Next project:</p>
-    <p class="font-bold text-xl md:text-3xl pb-4">{nextProject.title}</p>
+    <p class="pb-4 text-xl font-bold md:text-3xl">{nextProject.title}</p>
     {#each nextProject.subtitle as subtitle}
       <h3 class="font-serif italic">{subtitle}</h3>
     {/each}

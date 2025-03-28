@@ -1,13 +1,17 @@
 <script lang="ts">
-  export let image: ImageWithColor;
+  interface Props {
+    image: ImageWithColor;
+  }
+
+  let { image }: Props = $props();
 </script>
 
 <div
   class="
-    m-[-2px_-50vw_0] w-[100vw] relative left-1/2 right-1/2 h-[70vh]
+    relative right-1/2 left-1/2 m-[-2px_-50vw_0] h-[70vh] w-[100vw]
     border-y-2 border-black
     bg-white
-    bg-repeat-x bg-center bg-fixed bg-cover
+    bg-cover bg-fixed bg-center bg-repeat-x
   "
   style="background-image:url({image.src})"
 ></div>

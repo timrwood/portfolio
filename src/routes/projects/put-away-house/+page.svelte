@@ -53,10 +53,14 @@
 <FullBleed image={fullBleedImage1} />
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={sitePlanImage} alt="Top down drawing of the building and its neighbors" />
-  <Caption slot="right">
-    The north-facing site is located in the middle of a block on Potomac Ave in Wicker Park
-  </Caption>
+  {#snippet left()}
+    <Image  src={sitePlanImage} alt="Top down drawing of the building and its neighbors" />
+  {/snippet}
+  {#snippet right()}
+    <Caption >
+      The north-facing site is located in the middle of a block on Potomac Ave in Wicker Park
+    </Caption>
+  {/snippet}
 </SplitView>
 
 <PlanAndImages
@@ -90,32 +94,40 @@
 />
 
 <SplitView align="bottom" spacing="1|2">
-  <div slot="left" class="space-y-8">
-    <Caption>
-      Access into the building is oriented towards the east, with the three entries positioned along
-      the side of the building. The exterior stairs and doors to the units meet at a shared landing.
-    </Caption>
+  {#snippet left()}
+    <div  class="space-y-8">
+      <Caption>
+        Access into the building is oriented towards the east, with the three entries positioned along
+        the side of the building. The exterior stairs and doors to the units meet at a shared landing.
+      </Caption>
 
-    <Image src={elevationNorthPhoto} alt="Model photo of the front facade of the building" />
-  </div>
-  <Image
-    slot="right"
-    src={elevationNorthDrawing}
-    alt="Drawing of the front facade of the building"
-  />
+      <Image src={elevationNorthPhoto} alt="Model photo of the front facade of the building" />
+    </div>
+  {/snippet}
+  {#snippet right()}
+    <Image
+      
+      src={elevationNorthDrawing}
+      alt="Drawing of the front facade of the building"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|2">
-  <div slot="left" class="space-y-8">
-    <Caption>
-      A 3 foot change in floor height on either side of the shelving produces continuities between
-      the living room floor and the kitchen counter, and allows objects to be shared across the
-      shelving without sharing sight lines.
-    </Caption>
+  {#snippet left()}
+    <div  class="space-y-8">
+      <Caption>
+        A 3 foot change in floor height on either side of the shelving produces continuities between
+        the living room floor and the kitchen counter, and allows objects to be shared across the
+        shelving without sharing sight lines.
+      </Caption>
 
-    <Image src={sectionNorthPhoto} alt="Interior model photo of a kitchen table" />
-  </div>
-  <Image slot="right" src={sectionNorthDrawing} alt="Drawing cutting through the narrow section" />
+      <Image src={sectionNorthPhoto} alt="Interior model photo of a kitchen table" />
+    </div>
+  {/snippet}
+  {#snippet right()}
+    <Image  src={sectionNorthDrawing} alt="Drawing cutting through the narrow section" />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={fullBleedImage2} />
@@ -126,36 +138,44 @@
 <FullBleedScroll image={sectionEastImage} />
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={westFacadeImage} alt="Model photo of the blank west facade" />
-  <div slot="right" class="space-y-8">
-    <Caption>Operable windows punched into the west facade provide fresh air and daylight.</Caption>
+  {#snippet left()}
+    <Image  src={westFacadeImage} alt="Model photo of the blank west facade" />
+  {/snippet}
+  {#snippet right()}
+    <div  class="space-y-8">
+      <Caption>Operable windows punched into the west facade provide fresh air and daylight.</Caption>
 
-    <Image
-      src={westFacadeDetailImage}
-      alt="Close-up model photo of one of the windows in the facade"
-    />
-  </div>
+      <Image
+        src={westFacadeDetailImage}
+        alt="Close-up model photo of one of the windows in the facade"
+      />
+    </div>
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <div slot="left" class="space-y-8">
-    <Caption>
-      The prototype design of the shelving developed from applied surface to extruded form to grid
-      of voids.
-    </Caption>
+  {#snippet left()}
+    <div  class="space-y-8">
+      <Caption>
+        The prototype design of the shelving developed from applied surface to extruded form to grid
+        of voids.
+      </Caption>
 
-    <FourImages
-      src1={process1Image}
-      alt1="Model photo shelving as an applied surface"
-      src2={process2Image}
-      alt2="Model photo of stairs moving within shelving"
-      src3={process3Image}
-      alt3="Model photo of shelving as occupiable space"
-      src4={process4Image}
-      alt4="Model photo of shelving as a grid of voids"
-    />
-  </div>
-  <Image slot="right" src={halfBleedImage1} alt="Model photo of the blank west facade" />
+      <FourImages
+        src1={process1Image}
+        alt1="Model photo shelving as an applied surface"
+        src2={process2Image}
+        alt2="Model photo of stairs moving within shelving"
+        src3={process3Image}
+        alt3="Model photo of shelving as occupiable space"
+        src4={process4Image}
+        alt4="Model photo of shelving as a grid of voids"
+      />
+    </div>
+  {/snippet}
+  {#snippet right()}
+    <Image  src={halfBleedImage1} alt="Model photo of the blank west facade" />
+  {/snippet}
 </SplitView>
 
 <NextProject {project} />

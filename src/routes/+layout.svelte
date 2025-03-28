@@ -1,19 +1,21 @@
-<script>
+<script lang="ts">
   import '../app.css';
+
+  let { children } = $props();
 </script>
 
 <div class="fixed inset-x-0 z-50 bg-slate-50/80 backdrop-blur-sm">
   <nav
-    class="xl:container mx-auto flex justify-between px-3 uppercase leading-8 hover:text-slate-900"
+    class="mx-auto flex justify-between px-3 leading-8 uppercase hover:text-slate-900 xl:container"
   >
-    <a href="/" class="text-xl p-3 tracking-widest">Tim Wood</a>
-    <div class="shrink flex text-l text-slate-700">
+    <a href="/" class="p-3 text-xl tracking-widest">Tim Wood</a>
+    <div class="text-l flex shrink text-slate-700">
       <a href="/projects" class="p-3">Projects</a>
       <a href="/about" class="p-3">About</a>
     </div>
   </nav>
 </div>
 
-<div class="xl:container mx-auto py-16 px-3">
-  <slot />
+<div class="mx-auto px-3 py-16 xl:container">
+  {@render children()}
 </div>

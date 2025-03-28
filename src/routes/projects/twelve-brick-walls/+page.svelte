@@ -1,20 +1,9 @@
 <script lang="ts">
-  import {
-    Caption,
-    FullBleed,
-    Image,
-    Intro,
-    FourImages,
-    SplitView,
-    NextProject
-  } from '$lib/projects/index';
+  import { FourImages, FullBleed, Image, Intro, NextProject, SplitView } from '$lib/projects/index';
 
   import animationImage from './images/animation.webp?as=withColor';
-  import coverImage from './images/cover.jpg?as=withColor';
   import elevationsImage from './images/elevations.jpg?as=withColor';
-  import explodedImage from './images/exploded.jpg?as=withColor';
   import fullBleedImage from './images/full-bleed.jpg?as=withColor';
-  import introImage from './images/intro.jpg?as=withColor';
   import isoImage from './images/iso.jpg?as=withColor';
   import midtermElevationLongImage from './images/midterm-elevation-long.jpg?as=withColor';
   import midtermElevationShortImage from './images/midterm-elevation-short.jpg?as=withColor';
@@ -26,7 +15,6 @@
   import midtermSectionShortImage from './images/midterm-section-short.jpg?as=withColor';
   import perspective1Image from './images/perspective-1.jpg?as=withColor';
   import perspective2Image from './images/perspective-2.jpg?as=withColor';
-  import planImage from './images/plan.jpg?as=withColor';
   import sectionsImage from './images/sections.jpg?as=withColor';
   import wallDentImage from './images/wall-dent.jpg?as=withColor';
   import wallDepthIsoImage from './images/wall-depth-iso.jpg?as=withColor';
@@ -54,97 +42,142 @@
 <Intro {project} />
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={animationImage} alt="TBD" />
-  <Image slot="right" src={isoImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={animationImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={isoImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="top" spacing="2|1">
-  <Image slot="left" src={perspective1Image} alt="TBD" />
-  <Image slot="right" src={perspective2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={perspective1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={perspective2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={fullBleedImage} />
 
 <SplitView align="top" spacing="1|1">
-  <Image slot="left" src={elevationsImage} alt="TBD" />
-  <Image slot="right" src={sectionsImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={elevationsImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={sectionsImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={wedgeWallImage} alt="TBD" />
-  <Image slot="right" src={wedgeWallDetailImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={wedgeWallImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={wedgeWallDetailImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="top" spacing="1|2">
-  <Image slot="left" src={wedgeBrickImage} alt="TBD" />
-  <Image slot="right" src={wedgeFormSmallImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={wedgeBrickImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={wedgeFormSmallImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="top" spacing="1|1">
-  <Image slot="left" src={wedgeFormMediumImage} alt="TBD" />
-  <Image slot="right" src={wedgeFormLargeImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={wedgeFormMediumImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={wedgeFormLargeImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={midtermIso1Image} alt="TBD" />
-  <Image slot="right" src={midtermPerspectiveImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={midtermIso1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={midtermPerspectiveImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={midtermIso2Image} alt="TBD" />
-  <Image slot="right" src={midtermPlanImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={midtermIso2Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={midtermPlanImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={midtermElevationLongImage} alt="TBD" />
-  <Image slot="right" src={midtermSectionLongImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={midtermElevationLongImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={midtermSectionLongImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={midtermElevationShortImage} alt="TBD" />
-  <Image slot="right" src={midtermSectionShortImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={midtermElevationShortImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={midtermSectionShortImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="top" spacing="1|1">
-  <Image slot="left" src={wallSliceImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={wallSliceImage} alt="TBD" />
+  {/snippet}
 
-  <FourImages
-    slot="right"
-    alt1="TBD"
-    alt2="TBD"
-    alt3="TBD"
-    alt4="TBD"
-    src1={wallSliceDetailImage}
-    src2={wallDentImage}
-    src3={wallDepthImage}
-    src4={wallDepthIsoImage}
-  />
+  {#snippet right()}
+    <FourImages
+      alt1="TBD"
+      alt2="TBD"
+      alt3="TBD"
+      alt4="TBD"
+      src1={wallSliceDetailImage}
+      src2={wallDentImage}
+      src3={wallDepthImage}
+      src4={wallDepthIsoImage}
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="top" spacing="1|1">
-  <FourImages
-    slot="left"
-    alt1="TBD"
-    alt2="TBD"
-    alt3="TBD"
-    alt4="TBD"
-    src1={warmupShapeFrontImage}
-    src2={warmupSmallFrontImage}
-    src3={warmupShapeBackImage}
-    src4={warmupSmallBackImage}
-  />
+  {#snippet left()}
+    <FourImages
+      alt1="TBD"
+      alt2="TBD"
+      alt3="TBD"
+      alt4="TBD"
+      src1={warmupShapeFrontImage}
+      src2={warmupSmallFrontImage}
+      src3={warmupShapeBackImage}
+      src4={warmupSmallBackImage}
+    />
+  {/snippet}
 
-  <FourImages
-    slot="right"
-    alt1="TBD"
-    alt2="TBD"
-    alt3="TBD"
-    alt4="TBD"
-    src1={warmupMediumFrontImage}
-    src2={warmupLargeFrontImage}
-    src3={warmupMediumBackImage}
-    src4={warmupLargeBackImage}
-  />
+  {#snippet right()}
+    <FourImages
+      alt1="TBD"
+      alt2="TBD"
+      alt3="TBD"
+      alt4="TBD"
+      src1={warmupMediumFrontImage}
+      src2={warmupLargeFrontImage}
+      src3={warmupMediumBackImage}
+      src4={warmupLargeBackImage}
+    />
+  {/snippet}
 </SplitView>
 
 <NextProject {project} />

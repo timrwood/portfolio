@@ -34,154 +34,184 @@
 <FullBleed image={fullBleed1Image} />
 
 <SplitView align="top" spacing="2|1">
-  <Image
-    slot="left"
-    src={sitePlanImage}
-    alt="A top down map of the mouth of the Chicago river and the surrounding streets and buildings"
-  />
-  <Caption slot="right">
-    In red, the site is located at 250 N Upper Columbus Drive, near the mouth of the Chicago River
-  </Caption>
+  {#snippet left()}
+    <Image
+      src={sitePlanImage}
+      alt="A top down map of the mouth of the Chicago river and the surrounding streets and buildings"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Caption>
+      In red, the site is located at 250 N Upper Columbus Drive, near the mouth of the Chicago River
+    </Caption>
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|2">
-  <Caption slot="left">
-    In blue, a sampling of the typical age of a gym visitor throughout a typical day. In red, a
-    sampling of one individual's gym habits across their lifetime.
-  </Caption>
-  <Image
-    slot="right"
-    src={diagramDayUseImage}
-    alt="A graph showing the time of day that people of different ages visit the gym"
-  />
+  {#snippet left()}
+    <Caption>
+      In blue, a sampling of the typical age of a gym visitor throughout a typical day. In red, a
+      sampling of one individual's gym habits across their lifetime.
+    </Caption>
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={diagramDayUseImage}
+      alt="A graph showing the time of day that people of different ages visit the gym"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="2|1">
-  <Image
-    slot="left"
-    src={diagramViewsImage}
-    alt="Two people looking at each other from across a break in the floor"
-  />
-  <Caption slot="right">
-    Visual studies on changing field of view when adjacent floor plates are shifted vertically and
-    horizontally.
-  </Caption>
+  {#snippet left()}
+    <Image
+      src={diagramViewsImage}
+      alt="Two people looking at each other from across a break in the floor"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Caption>
+      Visual studies on changing field of view when adjacent floor plates are shifted vertically and
+      horizontally.
+    </Caption>
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|2">
-  <Caption slot="left">
-    Floor plates are split by a large atrium, allowing vertical shifts which create new adjacencies
-    between disparate programs.
-  </Caption>
-  <Image
-    slot="right"
-    src={diagramProgramImage}
-    alt="An exploded axonometric view of the building, broken apart into different segments"
-  />
+  {#snippet left()}
+    <Caption>
+      Floor plates are split by a large atrium, allowing vertical shifts which create new
+      adjacencies between disparate programs.
+    </Caption>
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={diagramProgramImage}
+      alt="An exploded axonometric view of the building, broken apart into different segments"
+    />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={sectionFullBleedImage} />
 
 <SplitView align="bottom" spacing="1|2">
-  <Caption slot="left">
-    The mulit-story atrium meanders as it travels up through the building, generating unique
-    conditions. An open air plaza at the upper Columbus datum overlooks a connection to the
-    underground Chicago Pedway at the lower Columbus datum.
-  </Caption>
-  <Image
-    slot="right"
-    src={sectionTallImage}
-    alt="A section through the short axis of the building"
-  />
+  {#snippet left()}
+    <Caption>
+      The mulit-story atrium meanders as it travels up through the building, generating unique
+      conditions. An open air plaza at the upper Columbus datum overlooks a connection to the
+      underground Chicago Pedway at the lower Columbus datum.
+    </Caption>
+  {/snippet}
+  {#snippet right()}
+    <Image src={sectionTallImage} alt="A section through the short axis of the building" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={plansAllImage} alt="37 floor plans of the tower" />
-  <Caption slot="right">
-    The rigidity of the structural grid and vertical circulation cores are punctuated by shifting
-    floorplate openings
-  </Caption>
+  {#snippet left()}
+    <Image src={plansAllImage} alt="37 floor plans of the tower" />
+  {/snippet}
+  {#snippet right()}
+    <Caption>
+      The rigidity of the structural grid and vertical circulation cores are punctuated by shifting
+      floorplate openings
+    </Caption>
+  {/snippet}
 </SplitView>
 
 <FullBleed image={plansGroundImage} />
 
 <SplitView align="bottom" spacing="1|1">
-  <Image
-    slot="left"
-    src={perspectiveGroundLImage}
-    alt="A man on a bicycle looks on at the rock climbers within the building"
-  />
-  <Image slot="right" src={perspectiveGroundRImage} alt="A woman photographs the rock climbers" />
+  {#snippet left()}
+    <Image
+      src={perspectiveGroundLImage}
+      alt="A man on a bicycle looks on at the rock climbers within the building"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image src={perspectiveGroundRImage} alt="A woman photographs the rock climbers" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|2">
-  <Image
-    slot="left"
-    src={diagramViewsArtImage}
-    alt="A diagram of the views between the artist and yoga spaces"
-  />
-  <Image slot="right" src={plansArtImage} alt="A plan oblique drawing of the art and yoga spaces" />
+  {#snippet left()}
+    <Image
+      src={diagramViewsArtImage}
+      alt="A diagram of the views between the artist and yoga spaces"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image src={plansArtImage} alt="A plan oblique drawing of the art and yoga spaces" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={perspectiveArtLImage} alt="Three people seated in yoga poses" />
-  <Image
-    slot="right"
-    src={perspectiveArtRImage}
-    alt="A woman paints a canvas, with the yoga class and weight lifters in the background"
-  />
+  {#snippet left()}
+    <Image src={perspectiveArtLImage} alt="Three people seated in yoga poses" />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={perspectiveArtRImage}
+      alt="A woman paints a canvas, with the yoga class and weight lifters in the background"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|2">
-  <Image
-    slot="left"
-    src={diagramViewsTrackImage}
-    alt="A diagram of the views between the running track and the basketball court"
-  />
-  <Image
-    slot="right"
-    src={plansTrackImage}
-    alt="A plan oblique drawing of the running track and the basketball court"
-  />
+  {#snippet left()}
+    <Image
+      src={diagramViewsTrackImage}
+      alt="A diagram of the views between the running track and the basketball court"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={plansTrackImage}
+      alt="A plan oblique drawing of the running track and the basketball court"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image
-    slot="left"
-    src={perspectiveTrackLImage}
-    alt="Two basketball players ready to start a game"
-  />
-  <Image
-    slot="right"
-    src={perspectiveTrackRImage}
-    alt="A person looks down over the basketball game below them"
-  />
+  {#snippet left()}
+    <Image src={perspectiveTrackLImage} alt="Two basketball players ready to start a game" />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={perspectiveTrackRImage}
+      alt="A person looks down over the basketball game below them"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|2">
-  <Image
-    slot="left"
-    src={diagramViewsShuffleImage}
-    alt="A diagram of the views between the shuffleboard court and daycare"
-  />
-  <Image
-    slot="right"
-    src={plansShuffleImage}
-    alt="A plan oblique drawing of the shuffleboard court and daycare"
-  />
+  {#snippet left()}
+    <Image
+      src={diagramViewsShuffleImage}
+      alt="A diagram of the views between the shuffleboard court and daycare"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={plansShuffleImage}
+      alt="A plan oblique drawing of the shuffleboard court and daycare"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="1|1">
-  <Image
-    slot="left"
-    src={perspectiveShuffleLImage}
-    alt="Three children overlook a nearby shuffleboard game"
-  />
-  <Image
-    slot="right"
-    src={perspectiveShuffleRImage}
-    alt="A woman awaits her turn on a shuffleboard court. In the background, three children look on."
-  />
+  {#snippet left()}
+    <Image
+      src={perspectiveShuffleLImage}
+      alt="Three children overlook a nearby shuffleboard game"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={perspectiveShuffleRImage}
+      alt="A woman awaits her turn on a shuffleboard court. In the background, three children look on."
+    />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={fullBleed2Image} />

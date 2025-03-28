@@ -40,13 +40,21 @@
 <Intro {project} />
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={history1Image} alt="TBD" />
-  <Image slot="right" src={history2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={history1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={history2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={history3Image} alt="TBD" />
-  <Image slot="right" src={siteContextImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={history3Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={siteContextImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={conceptModelImage} />
@@ -61,18 +69,21 @@
 <FullBleedScroll image={drawingShortSectionImage} />
 
 <SplitView align="bottom" spacing="1|1">
-  <Image slot="left" src={render2Image} alt="TBD" />
-  <FourImages
-    slot="right"
-    src1={render3Image}
-    alt1="TBD"
-    src2={render4Image}
-    alt2="TBD"
-    src3={render5Image}
-    alt3="TBD"
-    src4={render6Image}
-    alt4="TBD"
-  />
+  {#snippet left()}
+    <Image src={render2Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <FourImages
+      src1={render3Image}
+      alt1="TBD"
+      src2={render4Image}
+      alt2="TBD"
+      src3={render5Image}
+      alt3="TBD"
+      src4={render6Image}
+      alt4="TBD"
+    />
+  {/snippet}
 </SplitView>
 
 <Video id="u6pyWtG-CXw" />
@@ -81,15 +92,23 @@
 <FullBleedScroll image={render8Image} />
 
 <SplitView align="bottom" spacing="2|1">
-  <Image slot="left" src={model1Image} alt="TBD" />
-  <Image slot="right" src={model2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={model1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={model2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={materialWoodImage} />
 
 <SplitView align="top" spacing="1|2">
-  <Image slot="left" src={materialFeltImage} alt="TBD" />
-  <Image slot="right" src={materialAllImage} alt="TBD" />
+  {#snippet left()}
+    <Image src={materialFeltImage} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={materialAllImage} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <NextProject {project} />

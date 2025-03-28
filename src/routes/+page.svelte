@@ -8,24 +8,24 @@
 </svelte:head>
 
 <div
-  class="fixed inset-0 bg-center bg-[length:100%_auto] sm:bg-[length:600px_auto] flex items-center justify-center"
+  class="fixed inset-0 flex items-center justify-center bg-[length:100%_auto] bg-center sm:bg-[length:600px_auto]"
   style="background-image:url({gridImage})"
 >
   <div
     class="
-      w-full sm:w-[600px] aspect-[2/1]
-      flex items-center justify-center flex-col
-      sm:mb-[150px]
-      bg-white bg-center bg-[length:100%_auto] sm:bg-[length:600px_auto]
+      flex aspect-[2/1] w-full
+      flex-col items-center justify-center bg-white
+      bg-[length:100%_auto]
+      bg-center sm:mb-[150px] sm:w-[600px] sm:bg-[length:600px_auto]
     "
     style="background-image:url({gridInnerImage})"
   >
-    <h1 class="text-xl sm:text-3xl tracking-widest uppercase font-bold">Tim Wood</h1>
-    <h2 class="text-md sm:text-2xl tracking-widest font-serif italic pt-2 pb-6">
+    <h1 class="text-xl font-bold tracking-widest uppercase sm:text-3xl">Tim Wood</h1>
+    <h2 class="text-md pt-2 pb-6 font-serif tracking-widest italic sm:text-2xl">
       Architecture Portfolio
     </h2>
-    <a class="text-sm sm:text-xl p-1 sm:p-2 block underline" href="/projects"> View online </a>
-    <a class="text-sm sm:text-xl p-1 sm:p-2 block" href="/portfolio">
+    <a class="block p-1 text-sm underline sm:p-2 sm:text-xl" href="/projects"> View online </a>
+    <a class="block p-1 text-sm sm:p-2 sm:text-xl" href="/portfolio">
       <svg
         class="inline"
         xmlns="http://www.w3.org/2000/svg"

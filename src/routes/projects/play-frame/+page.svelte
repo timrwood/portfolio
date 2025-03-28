@@ -28,57 +28,77 @@
 <FullBleed image={fullBleed1Image} />
 
 <SplitView align="center" spacing="1|1">
-  <Image slot="left" src={elevation1Image} alt="TBD" />
-  <Image slot="right" src={elevation2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={elevation1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={elevation2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|1">
-  <Image slot="left" src={section1Image} alt="TBD" />
-  <Image slot="right" src={section2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={section1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={section2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|1">
-  <Image
-    slot="left"
-    src={square5Image}
-    alt="An overhead tree casts a summer-time shadow across the corrugated roof"
-  />
-  <FourImages
-    slot="right"
-    src1={square2Image}
-    alt1="A closeup on the wood joinery supporting the roof, dappled with raindrops"
-    src2={square4Image}
-    alt2="The roof hangs overhead, with tree branches whose leaves have been lost for the winter hanging further overhead"
-    src3={square1Image}
-    alt3="A girl sits on a chair, sheltered from the leaves in the fall"
-    src4={square3Image}
-    alt4="A view through the space between the rafters and collar ties, from one end of the structure to the other"
-  />
+  {#snippet left()}
+    <Image
+      src={square5Image}
+      alt="An overhead tree casts a summer-time shadow across the corrugated roof"
+    />
+  {/snippet}
+  {#snippet right()}
+    <FourImages
+      src1={square2Image}
+      alt1="A closeup on the wood joinery supporting the roof, dappled with raindrops"
+      src2={square4Image}
+      alt2="The roof hangs overhead, with tree branches whose leaves have been lost for the winter hanging further overhead"
+      src3={square1Image}
+      alt3="A girl sits on a chair, sheltered from the leaves in the fall"
+      src4={square3Image}
+      alt4="A view through the space between the rafters and collar ties, from one end of the structure to the other"
+    />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|1">
-  <Image slot="left" src={plan1Image} alt="TBD" />
-  <Image slot="right" src={plan2Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={plan1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={plan2Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <SplitView align="center" spacing="1|1">
-  <Image slot="left" src={plan3Image} alt="TBD" />
-  <Image slot="right" src={plan4Image} alt="TBD" />
+  {#snippet left()}
+    <Image src={plan3Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={plan4Image} alt="TBD" />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={fullBleed2Image} />
 
 <SplitView align="center" spacing="1|1">
-  <Image
-    slot="left"
-    src={roofSummerImage}
-    alt="An overhead tree casts a summer-time shadow across the corrugated roof"
-  />
-  <Image
-    slot="right"
-    src={roofWinterImage}
-    alt="Snow clings to the corrugated roof, with patches of snow which have fallen off from their own weight, forming interesting patterns"
-  />
+  {#snippet left()}
+    <Image
+      src={roofSummerImage}
+      alt="An overhead tree casts a summer-time shadow across the corrugated roof"
+    />
+  {/snippet}
+  {#snippet right()}
+    <Image
+      src={roofWinterImage}
+      alt="Snow clings to the corrugated roof, with patches of snow which have fallen off from their own weight, forming interesting patterns"
+    />
+  {/snippet}
 </SplitView>
 
 <FullBleed image={fullBleed3Image} />

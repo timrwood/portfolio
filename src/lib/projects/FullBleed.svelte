@@ -1,9 +1,13 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
 
-  export let image: ImageWithColor;
+  interface Props {
+    image: ImageWithColor;
+  }
+
+  let { image }: Props = $props();
 </script>
 
-<div class="m-[0_-50vw] w-[100vw] relative left-1/2 right-1/2">
+<div class="relative right-1/2 left-1/2 m-[0_-50vw] w-[100vw]">
   <Img {image} alt="Full Bleed" class="w-full" />
 </div>
