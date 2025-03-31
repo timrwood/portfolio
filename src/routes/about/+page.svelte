@@ -3,10 +3,9 @@
   import LinkedInLogo from './LinkedInLogo.svelte';
   import InstagramLogo from './InstagramLogo.svelte';
   import BlueskyLogo from './BlueskyLogo.svelte';
+  import EventLog from './EventLog.svelte';
 
   import profileImage from './images/profile.jpg?as=withColor';
-
-  import categories, { nowPercent } from './events';
 </script>
 
 <svelte:head>
@@ -109,45 +108,4 @@
   {/snippet}
 </SplitView>
 
-<div class="px-3">
-  <h2 class="pb-16 text-3xl font-bold tracking-widest uppercase">Life Timeline</h2>
-
-  <div class="sticky top-0 z-10 -mt-16 border-b border-slate-300 bg-slate-50 pt-16 pb-2">
-    <div class="flex justify-between text-sm sm:text-base">
-      <div>Birth</div>
-      <div>Death (projected)</div>
-    </div>
-    <div class="flex justify-between font-bold">
-      <div>0</div>
-      <div>10</div>
-      <div>20</div>
-      <div>30</div>
-      <div>40</div>
-      <div>50</div>
-      <div>60</div>
-      <div>70</div>
-      <div>80</div>
-    </div>
-  </div>
-
-  {#each Object.values(categories) as category}
-    <div style="padding-left:{nowPercent * 100}%;" class="ml-4 pt-8 pb-2 text-lg font-bold">
-      {category.name}
-    </div>
-    {#each Object.entries(category.groups) as [name, events]}
-      <div
-        class="relative h-6 border-t border-slate-300 font-serif text-xs/6 italic md:h-8 md:text-sm/8 lg:text-base/8"
-      >
-        <div style="left:{nowPercent * 100}%;" class="absolute top-0 ml-4">
-          {name}
-        </div>
-        {#each events as event}
-          <div
-            style="left:{event.startPercent * 100}%;right:{(1 - event.endPercent) * 100}%;"
-            class="absolute top-0 bottom-0 bg-slate-300"
-          ></div>
-        {/each}
-      </div>
-    {/each}
-  {/each}
-</div>
+<EventLog />
