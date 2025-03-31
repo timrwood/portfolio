@@ -50,9 +50,7 @@
       {category.name}
     </div>
     {#each Object.entries(category.groups) as [name, events]}
-      <div
-        class="relative h-6 font-serif text-xs/6 italic hover:bg-slate-100 md:h-8 md:text-sm/8 lg:text-base/8"
-      >
+      <div class="relative h-6 text-xs/6 hover:bg-slate-100 md:text-sm/6">
         <div style="left:{nowPercent * 100}%;" class="absolute top-0 ml-4">
           {name}
         </div>
