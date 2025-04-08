@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ListImage from './ListImage.svelte';
+  import ListImage from './ConfigLayer.svelte';
 
   let { layerStore } = $props();
 </script>

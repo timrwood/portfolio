@@ -1,4 +1,4 @@
-import { openDB } from 'idb';
+import { openDB, type IDBPDatabase } from 'idb';
 
 function decorate(record: any): ImageLayer {
   record = record as ImageLayer;
@@ -6,10 +6,10 @@ function decorate(record: any): ImageLayer {
   return record;
 }
 
-export default class FileStore {
+export default class LayerStore {
   dbName: string;
   storeName: string;
-  _dbPromise;
+  _dbPromise: Promise<IDBPDatabase> | undefined;
 
   layers: ImageLayer[] = $state.raw([]);
 

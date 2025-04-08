@@ -1,18 +1,3 @@
-type UploadedImage = {
-  data: ArrayBuffer;
-  name: string;
-  type: string;
-  size: number;
-  width: number;
-  height: number;
-};
-
-type UploadedImageRow = {
-  id: string;
-  src: string;
-  record: UploadedImage;
-};
-
 type ImageLayer = {
   data: ArrayBuffer;
   src: string;
@@ -21,4 +6,10 @@ type ImageLayer = {
   height: number;
   color: string;
   enabled: boolean;
+};
+
+type MainCanvasState = {
+  width: number;
+  height: number;
+  mode: 'multiply' | 'screen';
 };

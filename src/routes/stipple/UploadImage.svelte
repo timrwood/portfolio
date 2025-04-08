@@ -1,8 +1,8 @@
 <script lang="ts">
   import { process } from './db/process';
-  import FileStore from './db/FileStore.svelte';
+  import LayerStore from './db/LayerStore.svelte';
   interface Props {
-    layerStore: FileStore;
+    layerStore: LayerStore;
   }
 
   let { layerStore }: Props = $props();

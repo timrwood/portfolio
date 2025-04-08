@@ -2,16 +2,15 @@
   // import { page } from '$app/state';
   import { onMount } from 'svelte';
 
-  import FileStore from './db/FileStore.svelte';
+  import LayerStore from './db/LayerStore.svelte';
+  import Canvas from './Canvas.svelte';
 
   import UploadImage from './UploadImage.svelte';
-  import ListImages from './ListImages.svelte';
+  import ListImages from './ConfigLayers.svelte';
 
-  let layerStore = new FileStore('stipple', 'images');
+  let layerStore = new LayerStore('stipple', 'images');
 
-  let width = $state(120);
-  let height = $state(80);
-  let mode = $state('multiply');
+  let canvasState: MainCanvasState = $state({ width: 1200, height: 800, mode: 'multiply' });
 
   onMount(async () => {
     layerStore.refresh();
@@ -20,26 +19,26 @@
 
 <div class="flex gap-4 pb-4">
   <div class="font-bold">Width</div>
-  <input type="number" bind:value={width} min="0" max="3000" step="20" />
-  <input type="range" bind:value={width} min="0" max="3000" step="20" />
+  <input type="number" bind:value={canvasState.width} min="0" max="3000" step="20" />
+  <input type="range" bind:value={canvasState.width} min="0" max="3000" step="20" />
   <div class="font-bold">Height</div>
-  <input type="number" bind:value={height} min="0" max="3000" step="20" />
-  <input type="range" bind:value={height} min="0" max="3000" step="20" />
+  <input type="number" bind:value={canvasState.height} min="0" max="3000" step="20" />
+  <input type="range" bind:value={canvasState.height} min="0" max="3000" step="20" />
 
   <div>
     <label>
-      <input type="radio" name="mode" value="multiply" bind:group={mode} />
+      <input type="radio" name="mode" value="multiply" bind:group={canvasState.mode} />
       Multiply
     </label>
     <label>
-      <input type="radio" name="mode" value="screen" bind:group={mode} />
+      <input type="radio" name="mode" value="screen" bind:group={canvasState.mode} />
       Screen
     </label>
   </div>
 </div>
 
 <div class="flex justify-center">
-  <canvas class="max-w-full border-1" {width} {height}></canvas>
+  <Canvas {canvasState} {layerStore} />
 </div>
 
 <UploadImage {layerStore} />

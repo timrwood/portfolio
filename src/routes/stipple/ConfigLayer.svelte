@@ -1,8 +1,8 @@
 <script lang="ts">
-  import FileStore from './db/FileStore.svelte';
+  import LayerStore from './db/LayerStore.svelte';
 
   interface Props {
-    layerStore: FileStore;
+    layerStore: LayerStore;
     layer: ImageLayer;
   }
 
