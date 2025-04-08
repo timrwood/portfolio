@@ -12,3 +12,13 @@ type UploadedImageRow = {
   src: string;
   record: UploadedImage;
 };
+
+type ImageLayer = {
+  data: ArrayBuffer;
+  src: string;
+  name: string;
+  width: number;
+  height: number;
+  color: string;
+  enabled: boolean;
+};

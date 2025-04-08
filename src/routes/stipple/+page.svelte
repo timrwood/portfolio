@@ -1,16 +1,22 @@
 <script lang="ts">
-  import { page } from '$app/state';
+  // import { page } from '$app/state';
+  import { onMount } from 'svelte';
+
+  import FileStore from './db/FileStore.svelte';
 
   import UploadImage from './UploadImage.svelte';
   import ListImages from './ListImages.svelte';
 
-  let width = $state(1200);
-  let height = $state(800);
-  let mode = $state('multiply');
-</script>
+  let layerStore = new FileStore('stipple', 'images');
 
-<UploadImage />
-<ListImages />
+  let width = $state(120);
+  let height = $state(80);
+  let mode = $state('multiply');
+
+  onMount(async () => {
+    layerStore.refresh();
+  });
+</script>
 
 <div class="flex gap-4 pb-4">
   <div class="font-bold">Width</div>
@@ -35,3 +41,6 @@
 <div class="flex justify-center">
   <canvas class="max-w-full border-1" {width} {height}></canvas>
 </div>
+
+<UploadImage {layerStore} />
+<ListImages {layerStore} />

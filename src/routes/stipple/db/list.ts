@@ -21,3 +21,6 @@ export async function list(): Promise<UploadedImageRow[]> {
     };
   });
 }
+
+const store = new FileStore('images');
+const store;

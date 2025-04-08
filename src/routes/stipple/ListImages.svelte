@@ -1,16 +1,9 @@
 <script lang="ts">
-  import { list } from './db/list';
-  import { onMount } from 'svelte';
+  import ListImage from './ListImage.svelte';
 
-  let rows: UploadedImageRow[] = $state([]);
-
-  onMount(async () => {
-    rows = await list();
-  });
+  let { layerStore } = $props();
 </script>
 
-<div class="flex flex-wrap gap-2">
-  {#each rows as row}
-    <img class="h-20 w-auto" src={row.src} width={row.record.width} height={row.record.height} />
-  {/each}
-</div>
+{#each layerStore.layers as layer}
+  <ListImage {layer} {layerStore} />
+{/each}
