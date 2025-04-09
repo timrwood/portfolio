@@ -19,16 +19,37 @@
 
     const drawLayers = layerStore.layers.map((imageLayer) => new DrawLayer(imageLayer, canvas));
 
-    Promise.all(drawLayers.map((dl) => dl.load())).then(() => {
-      drawLayers.forEach((dl) => {
-        dl.drawIntoCanvas();
-        dl.stipple();
-      });
-    });
+    let timeout = 0;
+    let i = 0;
+    let ratio = 0.05;
+    let total = canvas.width * ratio;
 
-    return () => {
-      drawLayers.forEach((dl) => (dl.killed = true));
-    };
+    function draw() {
+      i++;
+      for (let y = 0; y < canvas.height; y++) {
+        drawLayers.forEach((dl) => dl.drawAtY(y, i / total));
+      }
+    }
+
+    function load() {
+      return Promise.all(drawLayers.map((dl) => dl.load()));
+    }
+
+    function setup() {
+      return drawLayers.forEach((dl) => dl.drawIntoCanvas());
+    }
+
+    function tick() {
+      if (i >= canvas.width) return;
+
+      draw();
+
+      timeout = setTimeout(tick);
+    }
+
+    load().then(setup).then(tick);
+
+    return () => clearTimeout(timeout);
   });
 </script>
 

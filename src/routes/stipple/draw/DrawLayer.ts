@@ -6,8 +6,7 @@ export class DrawLayer {
   targetContext: CanvasRenderingContext2D;
   context: CanvasRenderingContext2D;
   imageData: Uint8ClampedArray = new Uint8ClampedArray();
-  killed = false;
-  y = 0;
+  yTotals: number[] = [];
 
   constructor(imageLayer: ImageLayer, targetCanvas: HTMLCanvasElement) {
     this.imageLayer = imageLayer;
@@ -25,95 +24,88 @@ export class DrawLayer {
   }
 
   drawIntoCanvas() {
-    const targetRatio = this.targetCanvas.width / this.targetCanvas.height;
+    const { width, height } = this.targetCanvas;
+    const targetRatio = width / height;
     const selfRatio = this.imageLayer.width / this.imageLayer.height;
 
     let w, h, x, y;
 
     if (targetRatio > selfRatio) {
-      w = this.targetCanvas.width;
+      w = width;
       h = w / selfRatio;
       x = 0;
-      y = (this.targetCanvas.height - h) / 2;
+      y = (height - h) / 2;
     } else {
-      h = this.targetCanvas.height;
+      h = height;
       w = h * selfRatio;
       y = 0;
-      x = (this.targetCanvas.width - w) / 2;
+      x = (width - w) / 2;
     }
 
     console.log({ x, y, w, h });
 
     this.context.drawImage(this.image, x, y, w, h);
-    // this.targetContext.drawImage(this.image, x, y, w, h);
-    this.imageData = this.context.getImageData(
-      0,
-      0,
-      this.targetCanvas.width,
-      this.targetCanvas.height
-    ).data;
+    this.imageData = this.context.getImageData(0, 0, width, height).data;
+    this.calculateYPercents();
   }
 
-  stipple() {
-    setTimeout(() => {
-      this.y = this.y + 1;
-      this.next();
-    }, 0);
+  calculateYPercents() {
+    const { width, height } = this.targetCanvas;
+    const pixels = this.imageData;
+
+    for (let y = 0; y < height; y++) {
+      let value = 0;
+      for (let x = 0; x < width; x++) {
+        value += this.valueAt(x, y);
+      }
+      this.yTotals[y] = value;
+    }
   }
 
-  next() {
-    if (this.killed) return;
-    if (this.y > this.canvas.height) return;
+  valueAt(x: number, y: number) {
+    const pixel = (y * this.targetCanvas.width + x) * 4;
+    let value = this.imageData[pixel] + this.imageData[pixel + 1] + this.imageData[pixel + 2];
+    value = 765 - value;
+    return value;
+  }
 
-    let y = this.y;
-
-    this.targetContext.fillStyle = this.imageLayer.color;
-    let total = 0;
-    const ratio = 1600;
+  drawAtY(y: number, percent: number) {
+    const yTotal = this.yTotals[y] || 0;
+    const width = this.targetCanvas.width;
+    const context = this.targetContext;
 
     const pointScaleMin = 5;
     const pointScaleMax = 50;
 
-    const height = this.canvas.height;
-    const width = this.canvas.width;
+    if (yTotal < percent * 255 * width * 3) return;
 
-    const pixels = this.imageData;
-    const values = [];
+    const targetValue = Math.random() * yTotal;
+
+    let valuesToLeft = 0;
 
     for (let x = 0; x < width; x++) {
-      const pixel = (y * width + x) * 4;
-      let value = pixels[pixel] + pixels[pixel + 1] + pixels[pixel + 2];
-      value = value / 3;
-      value = 255 - value;
-      total += value;
-      values.push(value);
-    }
+      const value = this.valueAt(x, y);
+      valuesToLeft += value;
 
-    const count = total / ratio;
+      if (valuesToLeft > targetValue) {
+        const size = Math.sqrt((value * (pointScaleMax - pointScaleMin)) / 255);
 
-    for (let i = 0; i < count; i++) {
-      const point = Math.random() * total;
-      let run = 0;
-      for (let j = 0; j < values.length; j++) {
-        run += values[j];
+        context.fillStyle = this.imageLayer.color;
+        context.beginPath();
+        context.ellipse(
+          x + Math.random(),
+          y + Math.random(),
+          size / 2,
+          size / 2,
+          0,
+          0,
+          Math.PI * 2
+        );
+        context.fill();
 
-        if (run > point) {
-          const x = (j % width) + Math.random() - 0.5;
-
-          const pointScale = Math.sqrt((values[j] * (pointScaleMax - pointScaleMin)) / 255);
-
-          // const size = pointScaleMin + Math.random() * pointScale;
-          const size = pointScale;
-
-          this.targetContext.beginPath();
-          this.targetContext.ellipse(x, y + Math.random(), size / 2, size / 2, 0, 0, Math.PI * 2);
-          this.targetContext.fill();
-
-          break;
-        }
+        break;
       }
     }
-    this.stipple();
   }
 
   async load() {
