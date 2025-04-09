@@ -21,7 +21,7 @@
 
     let timeout = 0;
     let i = 0;
-    let ratio = 0.05;
+    let ratio = 0.2;
     let total = canvas.width * ratio;
 
     function draw() {

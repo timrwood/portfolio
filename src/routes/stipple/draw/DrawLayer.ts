@@ -74,8 +74,8 @@ export class DrawLayer {
     const width = this.targetCanvas.width;
     const context = this.targetContext;
 
-    const pointScaleMin = 5;
-    const pointScaleMax = 50;
+    const pointScaleMin = 2;
+    const pointScaleMax = 20;
 
     if (yTotal < percent * 255 * width * 3) return;
 
