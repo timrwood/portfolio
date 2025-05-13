@@ -24,11 +24,11 @@ const TBD = [
 ];
 
 export default [
-  playFrame,
   putAwayHouse,
-  aLongerNow,
-  brickedIn,
-  museAthleticClub,
   observingRuin,
+  museAthleticClub,
+  playFrame,
+  brickedIn,
+  aLongerNow,
   twelveBrickWalls
 ] as Project[];
