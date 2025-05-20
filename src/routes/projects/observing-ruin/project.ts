@@ -10,6 +10,7 @@ export default {
   coverImage,
   introImage,
   description: [
-    'Overlooked by most, the south wall of the Manhattan Building is largely covered by a battered brick wall, the last remaining remnant of a building demolished to make way for Congress Parkway in 1949. This project carefully positions a chiseled, prismatic opaque glass volume set in contrast to the historic context, the ground plane, the rough broken brick and the chaos of the surrounding intersection. Upon entry, guests turn off their devices, meander to and sit in a silent felt-lined room, looking onto this place, contemplating ruin.'
+    'The south wall of the Manhattan Building is made of rough battered common brick, the last remnant of the party wall to a building demolished in 1949 to make way for Congress Parkway.',
+    'A prismatic opaque glass volume sits in contrast to the historic context, the ground plane, the rough broken brick and the chaos and noise of the surrounding intersection. Upon entry, guests turn off their devices, meander to and sit in a silent felt-lined room, looking onto this place, contemplating ruin.'
   ]
 } as Project;

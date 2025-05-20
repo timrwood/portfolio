@@ -21,9 +21,7 @@
 >
   <div>
     <h2 class="text-3xl font-bold">{project.title}</h2>
-    <h3 class="pb-4 text-xl">{project.subtitle}</h3>
-    <h3 class="font-serif italic">{project.advisors}</h3>
-    <h3 class="font-serif italic">{project.year}</h3>
+    <h3 class="text-xl">{project.subtitle}</h3>
   </div>
   <Img
     image={project.introImage}
@@ -32,6 +30,12 @@
     class="row-span-2 self-center"
   />
   <div class="space-y-4">
+    <h3 class="font-serif italic">
+      {project.advisors}
+      <br />
+      {project.year}
+    </h3>
+
     {#each project.description as description}
       <p class="max-w-prose font-serif text-pretty">{@html description}</p>
     {/each}

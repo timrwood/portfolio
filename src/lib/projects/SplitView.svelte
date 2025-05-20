@@ -29,10 +29,10 @@
 
 <div class="my-12 my-18 px-3 lg:my-24">
   <div class="flex flex-col gap-12 lg:flex-row lg:gap-24 {alignMap[align]}">
-    <div class={leftSpacingMap[spacing]}>
+    <div class="space-y-8 {leftSpacingMap[spacing]}">
       {@render left()}
     </div>
-    <div class={rightSpacingMap[spacing]}>
+    <div class="space-y-8 {rightSpacingMap[spacing]}">
       {@render right()}
     </div>
   </div>

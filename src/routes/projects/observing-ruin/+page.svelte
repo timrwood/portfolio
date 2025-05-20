@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Caption from '$lib/projects/Caption.svelte';
   import {
     FourImages,
     FullBleed,
@@ -50,6 +51,10 @@
 
 <SplitView align="bottom" spacing="2|1">
   {#snippet left()}
+    <Caption>
+      When Congress Parkway was built, entire city blocks in Printer's Row were cut down the middle,
+      buildings bulldozed to clear the way.
+    </Caption>
     <Image src={history3Image} alt="TBD" />
   {/snippet}
   {#snippet right()}
