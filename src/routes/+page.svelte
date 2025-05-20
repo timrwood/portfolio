@@ -17,16 +17,16 @@
     class="relative bg-cover bg-[top_75%_left_50%]"
     style="background-image:url({topProject.coverImage.src}"
   >
-    <div class="aspect-[3/2] max-h-[70vh]"></div>
+    <div class="aspect-square max-h-[70vh] sm:aspect-[3/2]"></div>
     <div
       class="absolute inset-1 border-4 border-slate-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100"
     ></div>
   </div>
-  <div class="flex gap-2 py-2">
+  <div class="flex justify-between gap-2 pt-2">
     <div class="font-bold">{topProject.title}</div>
-    <div class="grow">{topProject.subtitle}</div>
     <div class="font-serif italic">{topProject.year}</div>
   </div>
+  <div class="pb-2">{topProject.subtitle}</div>
 </a>
 
 <div class="flex flex-col flex-nowrap gap-12 px-3 pb-8 sm:flex-row">
@@ -43,23 +43,23 @@
         ></div>
       </div>
 
-      <div class="flex gap-2 py-2">
+      <div class="flex justify-between gap-2 pt-2">
         <div class="font-bold">{project.title}</div>
-        <div class="grow">{project.subtitle}</div>
         <div class="font-serif italic">{project.year}</div>
       </div>
+      <div class="pb-2">{project.subtitle}</div>
     </a>
   {/each}
 </div>
 
-<div class="mb-12 border-b border-slate-300 pt-12"></div>
+<div class="mx-24 mb-12 border-b-3 border-slate-200 pt-12"></div>
 
 <div class="mx-auto flex flex-wrap justify-center gap-24 sm:w-2/3 sm:flex-nowrap lg:w-1/2">
   <a
     class="block w-full py-4 text-center font-semibold text-blue-600 hover:opacity-90 sm:w-1/2"
     href="/projects"
   >
-    <div class="pb-4">View All Projects</div>
+    <div class="pb-4">View all projects</div>
     <div class="flex flex-wrap">
       {#each top8Projects as project}
         <div class="w-1/4 p-1">
@@ -99,7 +99,7 @@
           d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h8Zm4 18V9h-5V4H6v16h12Zm-2-5-4 4-4-4 1.4-1.4 1.6 1.6V11h2v4.2l1.6-1.6L16 15Z"
           fill="currentColor"
         />
-      </svg>Download as PDF
+      </svg> Download as PDF
     </div>
     <div class="bg-slate-200 p-2">
       <Img image={portfolioTableOfContentsImage} alt="Portfolio PDF table of contents" />
