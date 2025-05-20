@@ -1,6 +1,7 @@
 <script lang="ts">
   import { FourImages, FullBleed, Image, Intro, NextProject, SplitView } from '$lib/projects/index';
 
+  import animationImageSrc from './images/animation.webp';
   import animationImage from './images/animation.webp?as=withColor';
   import elevationsImage from './images/elevations.jpg?as=withColor';
   import fullBleedImage from './images/full-bleed.jpg?as=withColor';
@@ -37,13 +38,15 @@
   import wedgeWallImage from './images/wedge-wall.jpg?as=withColor';
 
   import project from './project';
+
+  const animationImageMerged = Object.assign({}, animationImage, { src: animationImageSrc });
 </script>
 
 <Intro {project} />
 
 <SplitView align="bottom" spacing="1|1">
   {#snippet left()}
-    <Image src={animationImage} alt="TBD" />
+    <Image src={animationImageMerged} alt="TBD" />
   {/snippet}
   {#snippet right()}
     <Image src={isoImage} alt="TBD" />
