@@ -1,24 +1,27 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
 
-  import projects from './projects';
+  import { allProjects } from './projects';
 </script>
 
 <svelte:head>
   <title>Tim Wood | Projects</title>
 </svelte:head>
 
-<h2 class="py-8 text-center text-3xl font-bold tracking-widest uppercase">Projects</h2>
+<h2 class="py-8 text-center text-3xl font-bold tracking-widest uppercase">All Projects</h2>
 
 <div class="flex flex-wrap">
-  {#each projects as project}
+  {#each allProjects as project}
     <a href="/projects/{project.slug}" class="group w-1/2 p-3 sm:w-1/3 lg:w-1/4">
-      <div class="aspect-square">
+      <div class="relative aspect-square">
         <Img
-          image={project.introImage}
+          image={project.coverImage}
           alt="{project.title} cover image"
-          class="h-full w-full object-cover group-hover:opacity-90"
+          class="h-full w-full object-cover"
         />
+        <div
+          class="absolute inset-1 border-4 border-slate-50 opacity-0 transition-opacity duration-350 ease-out group-hover:opacity-100 group-hover:duration-50"
+        ></div>
       </div>
 
       <div class="flex justify-between gap-2 pt-2">

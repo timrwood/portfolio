@@ -1,6 +1,6 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
-  import projects from '../../routes/projects/projects';
+  import { allProjects } from '../../routes/projects/projects';
 
   interface Props {
     project: Project;
@@ -8,8 +8,8 @@
 
   let { project }: Props = $props();
 
-  const projectIndex = projects.findIndex((p) => p.slug === project.slug);
-  const nextProject = projects[projectIndex + 1] || projects[0];
+  const projectIndex = allProjects.findIndex((p) => p.slug === project.slug);
+  const nextProject = allProjects[projectIndex + 1] || allProjects[0];
 </script>
 
 <a href="/projects/{nextProject.slug}" class="flex items-center gap-8 px-3 pt-24 pb-12">

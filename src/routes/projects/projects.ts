@@ -23,7 +23,7 @@ const TBD = [
   tinyHouses
 ];
 
-export default [
+export const allProjects = [
   observingRuin,
   putAwayHouse,
   museAthleticClub,
@@ -33,5 +33,5 @@ export default [
   twelveBrickWalls
 ] as Project[];
 
-export const top1 = observingRuin;
-export const top3 = [putAwayHouse, museAthleticClub, playFrame];
+export const topProject = observingRuin;
+export const next3Projects = [putAwayHouse, museAthleticClub, playFrame];

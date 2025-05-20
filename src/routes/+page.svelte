@@ -1,34 +1,46 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
 
-  import { top1, top3 } from './projects/projects';
+  import portfolioTableOfContentsImage from './images/portfolio-table-of-contents.jpg?as=withColor';
+
+  import { topProject, next3Projects, allProjects } from './projects/projects';
+
+  const top8Projects = allProjects.slice(0, 8);
 </script>
 
 <svelte:head>
   <title>Tim Wood | Architecture Portfolio</title>
 </svelte:head>
 
-<a href="/projects/{top1.slug}" class="group block px-3 py-8">
+<a href="/projects/{topProject.slug}" class="group block px-3 py-8">
   <div
-    class="aspect-[3/2] bg-cover bg-center"
-    style="background-image:url({top1.introImage.src}"
-  ></div>
+    class="relative bg-cover bg-[top_75%_left_50%]"
+    style="background-image:url({topProject.coverImage.src}"
+  >
+    <div class="aspect-[3/2] max-h-[70vh]"></div>
+    <div
+      class="absolute inset-1 border-4 border-slate-50 opacity-0 transition-opacity duration-150 group-hover:opacity-100"
+    ></div>
+  </div>
   <div class="flex gap-2 py-2">
-    <div class="font-bold">{top1.title}</div>
-    <div class="grow">{top1.subtitle}</div>
-    <div class="font-serif italic">{top1.year}</div>
+    <div class="font-bold">{topProject.title}</div>
+    <div class="grow">{topProject.subtitle}</div>
+    <div class="font-serif italic">{topProject.year}</div>
   </div>
 </a>
 
-<div class="flex flex-wrap">
-  {#each top3 as project}
-    <a href="/projects/{project.slug}" class="group block p-3 sm:w-1/3">
-      <div class="aspect-square">
+<div class="flex flex-col flex-nowrap gap-12 px-3 pb-8 sm:flex-row">
+  {#each next3Projects as project}
+    <a href="/projects/{project.slug}" class="group group block basis-1/3">
+      <div class="relative aspect-square">
         <Img
-          image={project.introImage}
+          image={project.coverImage}
           alt="{project.title} cover image"
-          class="h-full w-full object-cover group-hover:opacity-90"
+          class="h-full w-full object-cover"
         />
+        <div
+          class="absolute inset-1 border-4 border-slate-50 opacity-0 transition-opacity duration-250 group-hover:opacity-100 group-hover:duration-0"
+        ></div>
       </div>
 
       <div class="flex gap-2 py-2">
@@ -40,25 +52,42 @@
   {/each}
 </div>
 
-<!-- <div
-  class="fixed inset-0 flex items-center justify-center bg-[length:100%_auto] bg-center sm:bg-[length:600px_auto]"
-  style="background-image:url({gridImage})"
->
-  <div
-    class="
-      flex aspect-[2/1] w-full
-      flex-col items-center justify-center bg-white
-      bg-[length:100%_auto]
-      bg-center sm:mb-[150px] sm:w-[600px] sm:bg-[length:600px_auto]
-    "
-    style="background-image:url({gridInnerImage})"
+<div class="mb-12 border-b border-slate-300 pt-12"></div>
+
+<div class="mx-auto flex flex-wrap justify-center gap-24 sm:w-2/3 sm:flex-nowrap lg:w-1/2">
+  <a
+    class="block w-full py-4 text-center font-semibold text-blue-600 hover:opacity-90 sm:w-1/2"
+    href="/projects"
   >
-    <h1 class="text-xl font-bold tracking-widest uppercase sm:text-3xl">Tim Wood</h1>
-    <h2 class="text-md pt-2 pb-6 font-serif tracking-widest italic sm:text-2xl">
-      Architecture Portfolio
-    </h2>
-    <a class="block p-1 text-sm underline sm:p-2 sm:text-xl" href="/projects"> View online </a>
-    <a class="block p-1 text-sm sm:p-2 sm:text-xl" href="/portfolio">
+    <div class="pb-4">View All Projects</div>
+    <div class="flex flex-wrap">
+      {#each top8Projects as project}
+        <div class="w-1/4 p-1">
+          <div class="aspect-square" style="background-color:{project.coverImage.color}"></div>
+          <div class="flex justify-stretch pt-1">
+            <div
+              class="grow border-t-4 border-slate-500"
+              style="flex-basis:{project.title.length}%"
+            ></div>
+            <div class="grow basis-1/4"></div>
+            <div class="grow-0 basis-3 border-t-4 border-slate-500"></div>
+          </div>
+          <div class="flex justify-stretch">
+            <div
+              class="mt-1 grow border-t-2 border-slate-500"
+              style="flex-basis:{project.subtitle.length}%"
+            ></div>
+            <div class="grow basis-1/3"></div>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </a>
+  <a
+    class="block w-full py-4 text-center font-semibold text-blue-600 hover:opacity-90 sm:w-1/2"
+    href="/portfolio"
+  >
+    <div class="pb-4 text-center font-semibold text-blue-600">
       <svg
         class="inline"
         xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +97,12 @@
       >
         <path
           d="m14 2 6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h8Zm4 18V9h-5V4H6v16h12Zm-2-5-4 4-4-4 1.4-1.4 1.6 1.6V11h2v4.2l1.6-1.6L16 15Z"
+          fill="currentColor"
         />
-      </svg>
-      <span class="underline">Download as PDF</span>
-    </a>
-  </div>
-</div> -->
+      </svg>Download as PDF
+    </div>
+    <div class="bg-slate-200 p-2">
+      <Img image={portfolioTableOfContentsImage} alt="Portfolio PDF table of contents" />
+    </div>
+  </a>
+</div>
