@@ -1,13 +1,54 @@
-<script>
+<script lang="ts">
+  import Img from '$lib/Img.svelte';
   import gridImage from './images/grid.jpg';
   import gridInnerImage from './images/grid-inner.jpg';
+  import projects from './projects/projects';
+
+  const firstProject = projects.at(0) as Project;
+  const otherProjects = projects.slice(1);
 </script>
 
 <svelte:head>
   <title>Tim Wood | Architecture Portfolio</title>
 </svelte:head>
 
-<div
+<a href="/projects/{firstProject.slug}" class="group block px-3 pb-3">
+  <div
+    class="h-[80vh] bg-cover bg-center"
+    style="background-image:url({firstProject.introImage.src}"
+  ></div>
+  <div class="flex justify-between py-2">
+    <div class="d">
+      <strong>{firstProject.title}</strong>
+      <em>2022</em>
+    </div>
+    <div>A Room</div>
+  </div>
+</a>
+
+<div class="flex flex-wrap">
+  {#each otherProjects as project}
+    <a href="/projects/{project.slug}" class="group block p-3 sm:w-1/3">
+      <div class="aspect-square">
+        <Img
+          image={project.coverImage}
+          alt="{project.title} cover image"
+          class="h-full w-full object-cover group-hover:opacity-70"
+        />
+      </div>
+
+      <h2 class="py-2 font-bold text-slate-800">{project.title}</h2>
+
+      {#each project.subtitle as subtitle}
+        <h3 class="font-serif text-sm italic">
+          {subtitle}
+        </h3>
+      {/each}
+    </a>
+  {/each}
+</div>
+
+<!-- <div
   class="fixed inset-0 flex items-center justify-center bg-[length:100%_auto] bg-center sm:bg-[length:600px_auto]"
   style="background-image:url({gridImage})"
 >
@@ -40,4 +81,4 @@
       <span class="underline">Download as PDF</span>
     </a>
   </div>
-</div>
+</div> -->

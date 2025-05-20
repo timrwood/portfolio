@@ -24,8 +24,8 @@ const TBD = [
 ];
 
 export default [
-  putAwayHouse,
   observingRuin,
+  putAwayHouse,
   museAthleticClub,
   playFrame,
   brickedIn,
