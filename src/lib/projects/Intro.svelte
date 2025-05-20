@@ -20,10 +20,10 @@
   class="grid grid-cols-1 grid-rows-[auto_minmax(0,1fr)] gap-x-12 gap-y-4 px-3 py-12 lg:grid-cols-2 lg:gap-x-24 lg:py-24"
 >
   <div>
-    <h2 class="pb-4 text-3xl font-bold">{project.title}</h2>
-    {#each project.subtitle as subtitle}
-      <h3 class="font-serif italic">{subtitle}</h3>
-    {/each}
+    <h2 class="text-3xl font-bold">{project.title}</h2>
+    <h3 class="pb-4 text-xl">{project.subtitle}</h3>
+    <h3 class="font-serif italic">{project.advisors}</h3>
+    <h3 class="font-serif italic">{project.year}</h3>
   </div>
   <Img
     image={project.introImage}

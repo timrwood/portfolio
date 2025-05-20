@@ -3,9 +3,11 @@
 type Project = {
   slug: string;
   title: string;
+  year: string;
+  subtitle: string;
   coverImage: ImageWithColor;
   introImage: ImageWithColor;
-  subtitle: string[];
+  advisors: string;
   description: string[];
 };
 

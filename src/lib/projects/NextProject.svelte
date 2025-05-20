@@ -18,9 +18,9 @@
   </div>
   <div class="w-2/3 md:w-1/2">
     <p class="font-serif italic">Next project:</p>
-    <p class="pb-4 text-xl font-bold md:text-3xl">{nextProject.title}</p>
-    {#each nextProject.subtitle as subtitle}
-      <h3 class="font-serif italic">{subtitle}</h3>
-    {/each}
+    <p class="text-xl font-bold md:text-3xl">{nextProject.title}</p>
+    <h3 class="pb-2 text-xl">{nextProject.subtitle}</h3>
+
+    <h3 class="font-serif italic">{nextProject.year}</h3>
   </div>
 </a>

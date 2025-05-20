@@ -12,20 +12,20 @@
 
 <div class="flex flex-wrap">
   {#each projects as project}
-    <a
-      href="/projects/{project.slug}"
-      class="group relative aspect-[2/3] w-1/2 p-3 sm:w-1/3 lg:w-1/4"
-    >
-      <Img
-        image={project.coverImage}
-        alt="{project.title} cover image"
-        class="h-full w-full rounded-lg object-cover group-hover:opacity-70"
-      />
-      <h2
-        class="absolute inset-x-3 bottom-3 flex h-14 items-center justify-center rounded-b-lg bg-white/50 px-2 backdrop-blur-sm"
-      >
-        <div class="text-center leading-5 font-bold text-slate-800 uppercase">{project.title}</div>
-      </h2>
+    <a href="/projects/{project.slug}" class="group w-1/2 p-3 sm:w-1/3 lg:w-1/4">
+      <div class="aspect-square">
+        <Img
+          image={project.introImage}
+          alt="{project.title} cover image"
+          class="h-full w-full object-cover group-hover:opacity-90"
+        />
+      </div>
+
+      <div class="flex justify-between gap-2 pt-2">
+        <div class="font-bold">{project.title}</div>
+        <div class="font-serif italic">{project.year}</div>
+      </div>
+      <div class="pb-2">{project.subtitle}</div>
     </a>
   {/each}
 </div>

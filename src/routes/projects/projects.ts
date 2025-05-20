@@ -32,3 +32,6 @@ export default [
   aLongerNow,
   twelveBrickWalls
 ] as Project[];
+
+export const top1 = observingRuin;
+export const top3 = [putAwayHouse, museAthleticClub, playFrame];

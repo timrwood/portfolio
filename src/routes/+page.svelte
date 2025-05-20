@@ -1,49 +1,41 @@
 <script lang="ts">
   import Img from '$lib/Img.svelte';
-  import gridImage from './images/grid.jpg';
-  import gridInnerImage from './images/grid-inner.jpg';
-  import projects from './projects/projects';
 
-  const firstProject = projects.at(0) as Project;
-  const otherProjects = projects.slice(1);
+  import { top1, top3 } from './projects/projects';
 </script>
 
 <svelte:head>
   <title>Tim Wood | Architecture Portfolio</title>
 </svelte:head>
 
-<a href="/projects/{firstProject.slug}" class="group block px-3 pb-3">
+<a href="/projects/{top1.slug}" class="group block px-3 py-8">
   <div
-    class="h-[80vh] bg-cover bg-center"
-    style="background-image:url({firstProject.introImage.src}"
+    class="aspect-[3/2] bg-cover bg-center"
+    style="background-image:url({top1.introImage.src}"
   ></div>
-  <div class="flex justify-between py-2">
-    <div class="d">
-      <strong>{firstProject.title}</strong>
-      <em>2022</em>
-    </div>
-    <div>A Room</div>
+  <div class="flex gap-2 py-2">
+    <div class="font-bold">{top1.title}</div>
+    <div class="grow">{top1.subtitle}</div>
+    <div class="font-serif italic">{top1.year}</div>
   </div>
 </a>
 
 <div class="flex flex-wrap">
-  {#each otherProjects as project}
+  {#each top3 as project}
     <a href="/projects/{project.slug}" class="group block p-3 sm:w-1/3">
       <div class="aspect-square">
         <Img
-          image={project.coverImage}
+          image={project.introImage}
           alt="{project.title} cover image"
-          class="h-full w-full object-cover group-hover:opacity-70"
+          class="h-full w-full object-cover group-hover:opacity-90"
         />
       </div>
 
-      <h2 class="py-2 font-bold text-slate-800">{project.title}</h2>
-
-      {#each project.subtitle as subtitle}
-        <h3 class="font-serif text-sm italic">
-          {subtitle}
-        </h3>
-      {/each}
+      <div class="flex gap-2 py-2">
+        <div class="font-bold">{project.title}</div>
+        <div class="grow">{project.subtitle}</div>
+        <div class="font-serif italic">{project.year}</div>
+      </div>
     </a>
   {/each}
 </div>
