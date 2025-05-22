@@ -13,8 +13,7 @@ import verticalAndHorizontal from './vertical-and-horizontal/project';
 import tinyHouses from './tiny-houses/project';
 import playFrame from './play-frame/project';
 
-const TBD = [
-  singleParent,
+const UNSTARTED = [
   museumMarket,
   theMonasticPath,
   chicagoFrame,
@@ -22,6 +21,8 @@ const TBD = [
   verticalAndHorizontal,
   tinyHouses
 ];
+
+const STARTED = [singleParent];
 
 export const allProjects = [
   observingRuin,
