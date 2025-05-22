@@ -12,6 +12,7 @@ import polarAndCartesian from './polar-and-cartesian/project';
 import verticalAndHorizontal from './vertical-and-horizontal/project';
 import tinyHouses from './tiny-houses/project';
 import playFrame from './play-frame/project';
+import foodSpaceFrame from './food-space-frame/project';
 
 const UNSTARTED = [
   museumMarket,
@@ -19,7 +20,8 @@ const UNSTARTED = [
   chicagoFrame,
   polarAndCartesian,
   verticalAndHorizontal,
-  tinyHouses
+  tinyHouses,
+  foodSpaceFrame
 ];
 
 const STARTED = [];
