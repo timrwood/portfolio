@@ -5,7 +5,7 @@ export default {
   slug: 'bricked-in',
   title: 'Bricked In',
   year: '2024',
-  subtitle: 'A Photo Essay',
+  subtitle: 'A photo essay',
   advisors: 'Published in Fresh Meat Journal 14',
   coverImage,
   introImage,

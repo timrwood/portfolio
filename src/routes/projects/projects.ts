@@ -22,7 +22,7 @@ const UNSTARTED = [
   tinyHouses
 ];
 
-const STARTED = [singleParent];
+const STARTED = [];
 
 export const allProjects = [
   observingRuin,
@@ -31,6 +31,7 @@ export const allProjects = [
   playFrame,
   brickedIn,
   aLongerNow,
+  singleParent,
   twelveBrickWalls
 ] as Project[];
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import SingleView from './SingleView.svelte';
+
   interface Props {
     align?: 'top' | 'center' | 'bottom';
     spacing?: '1|1' | '1|2' | '2|1';
@@ -27,7 +29,7 @@
   };
 </script>
 
-<div class="my-12 my-18 px-3 lg:my-24">
+<SingleView>
   <div class="flex flex-col gap-12 lg:flex-row lg:gap-24 {alignMap[align]}">
     <div class="space-y-8 {leftSpacingMap[spacing]}">
       {@render left()}
@@ -36,4 +38,4 @@
       {@render right()}
     </div>
   </div>
-</div>
+</SingleView>

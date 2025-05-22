@@ -6,6 +6,18 @@ import Image from './Image.svelte';
 import Intro from './Intro.svelte';
 import NextProject from './NextProject.svelte';
 import SplitView from './SplitView.svelte';
+import SingleView from './SingleView.svelte';
 import Video from './Video.svelte';
 
-export { Caption, Description, FourImages, FullBleed, Image, Intro, NextProject, SplitView, Video };
+export {
+  Caption,
+  Description,
+  FourImages,
+  FullBleed,
+  Image,
+  Intro,
+  NextProject,
+  SplitView,
+  SingleView,
+  Video
+};
