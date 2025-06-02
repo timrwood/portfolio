@@ -18,13 +18,12 @@ const UNSTARTED = [
   museumMarket,
   theMonasticPath,
   chicagoFrame,
-  polarAndCartesian,
   verticalAndHorizontal,
   tinyHouses,
   foodSpaceFrame
 ];
 
-const STARTED = [];
+const STARTED = [polarAndCartesian];
 
 export const allProjects = [
   observingRuin,
