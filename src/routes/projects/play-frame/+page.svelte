@@ -1,11 +1,16 @@
 <script lang="ts">
   import { FourImages, FullBleed, Image, Intro, NextProject, SplitView } from '$lib/projects/index';
 
+  import construction1Image from './images/construction-1.jpg?as=withColor';
+  import construction2Image from './images/construction-2.jpg?as=withColor';
+  import construction3Image from './images/construction-3.jpg?as=withColor';
+  import construction4Image from './images/construction-4.jpg?as=withColor';
   import elevation1Image from './images/elevation-1.png?as=withColor';
   import elevation2Image from './images/elevation-2.png?as=withColor';
   import fullBleed1Image from './images/full-bleed-1.jpg?as=withColor';
   import fullBleed2Image from './images/full-bleed-2.jpg?as=withColor';
   import fullBleed3Image from './images/full-bleed-3.jpg?as=withColor';
+  import fullBleed4Image from './images/full-bleed-4.jpg?as=withColor';
   import plan1Image from './images/plan-1.png?as=withColor';
   import plan2Image from './images/plan-2.png?as=withColor';
   import plan3Image from './images/plan-3.png?as=withColor';
@@ -81,6 +86,26 @@
   {/snippet}
   {#snippet right()}
     <Image src={plan4Image} alt="TBD" />
+  {/snippet}
+</SplitView>
+
+<FullBleed image={fullBleed4Image} />
+
+<SplitView align="center" spacing="1|1">
+  {#snippet left()}
+    <Image src={construction1Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={construction2Image} alt="TBD" />
+  {/snippet}
+</SplitView>
+
+<SplitView align="center" spacing="1|1">
+  {#snippet left()}
+    <Image src={construction3Image} alt="TBD" />
+  {/snippet}
+  {#snippet right()}
+    <Image src={construction4Image} alt="TBD" />
   {/snippet}
 </SplitView>
 
