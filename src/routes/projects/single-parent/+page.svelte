@@ -32,15 +32,15 @@
 
 <SingleView>
   <div class="flex flex-col gap-12 lg:flex-row">
-    <div class="shrink grow">
+    <div class="basis-1/3">
       <Image src={precedentHomesgarthImage} alt="TBD" />
       <div class="py-2"><strong>Homesgarth</strong>, Ebenezer Howard, 1909</div>
     </div>
-    <div class="shrink grow">
+    <div class="basis-1/3">
       <Image src={precedentFamilistereImage} alt="TBD" />
       <div class="py-2"><strong>Le Familistère Guise</strong>, Jean-Baptiste André Godin, 1859</div>
     </div>
-    <div class="shrink grow">
+    <div class="basis-1/3">
       <Image src={precedentUniteImage} alt="TBD" />
       <div class="py-2"><strong>Unité d'habitation</strong>, Le Corbusier, 1952</div>
     </div>
