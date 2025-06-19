@@ -15,7 +15,7 @@
 
 <h2 class="py-8 text-center text-3xl font-bold tracking-widest uppercase">About Me</h2>
 
-<div class="mx-auto w-1/3 space-y-6 py-8 text-center">
+<div class="mx-auto w-5/6 space-y-6 py-8 text-center sm:w-1/2 md:w-1/3">
   <Image src={profileImage} alt="A portrait of Tim Wood" className="rounded-t-full" />
   <h2 class="text-4xl font-semibold tracking-widest uppercase">Tim Wood</h2>
   <h3 class="text-2xl">A designer on the path to becoming a licensed Architect.</h3>
@@ -37,7 +37,7 @@
 
 <Image src={skillsImage} alt="A diagram of the skills I've developed over the years" />
 
-<div class="mx-auto max-w-prose space-y-6 py-8 font-serif leading-loose text-pretty">
+<div class="mx-auto max-w-prose space-y-6 px-3 py-8 font-serif leading-loose text-pretty">
   <p>
     As someone who started pursuing architecture in earnest later in my career, I've had extra time
     to build up a robust set of skills and knowledge through my work in related fields.
